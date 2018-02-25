@@ -1,0 +1,599 @@
+@import "vars"
+
+
+@media only screen and (max-width : 1042px)
+	.block-3
+		.block-3-form input, .form-button
+			max-width: 200px
+
+
+@media only screen and (max-width : 991px)
+
+	.header, .footer
+		&-cell-1
+			width: 36%
+		&-nav
+			min-height: 50px
+			padding: 0
+		&-cell-2
+			width: 100%
+			right: 0
+		&-cell-3
+			width: 36%
+			float: right
+			left: 0
+
+
+	.block-1
+		margin-top: 150px
+		&-services
+			width: 65%
+
+		&-slider-wrap
+			left: 42%
+			transform: translateX(-50%)
+			bottom: 200px
+
+
+	.block-2
+		padding-bottom: 0
+		&-cell
+			width: 50%
+			text-align: center
+		&-content
+			margin-bottom: 50px
+			&-title
+				padding: 0 65px
+		&-button
+			max-width: 213px
+
+
+	.block-3
+		&-cell-1, &-cell-2
+			width: 50%
+
+		&-info
+			padding: 0
+			text-align: center
+
+		.block-3-form
+			max-width: 80%
+			margin: 0 auto
+
+		.label-name, .label-tel
+			margin-right: 0
+			margin-bottom: 20px
+
+		.block-3-form input, .form-button
+			max-width: 100%
+			width: 100%
+		.block-3-form input
+			margin-bottom: 20px
+
+
+
+	.block-5
+		&-cell
+			width: 100%
+
+		&-button
+			float: none
+			width: 100%
+			&-bid
+				margin-bottom: 15px
+
+
+
+
+	.block-6
+		&::after
+			display: none
+		&-cell
+		&-item
+			&-text
+				br
+					display: none
+
+
+
+	.block-8
+		&-cell
+			width: 50%
+			margin-bottom: 30px
+			&:last-child
+				float: none
+				margin-left: auto
+				margin-right: auto
+
+
+
+	.block-9
+		&-address
+			&::before
+				right: 25px
+
+
+
+	.footer
+		&-nav-list
+			text-align: center
+		.contacts
+			padding-top: 18px
+
+
+
+	/**/
+
+
+
+@media only screen and (max-width : 767px)
+
+	.header
+		&-cell-1
+			width: 39%
+		&-cell-2
+			width: 100%
+		&-cell-3
+			width: 46%
+			max-width: 251px
+
+	.header
+		position: static
+
+	.block-1
+		margin-top: 0
+		.cell
+			width: 100%
+			float: none
+			right: auto
+			left: auto
+
+		&-services
+			width: auto
+			li
+				display: block
+				width: 235px
+				margin-left: auto
+				margin-right: auto
+
+		&-img-wrap
+			margin: 30px auto 0
+			max-width: 360px
+			height: 360px
+			.master-img
+				bottom: auto
+				top: 0
+				max-width: 75%
+
+		&-slider-wrap
+			position: relative
+			transform: none
+			bottom: 0
+			left: auto
+			right: auto
+			max-width: 205px
+			margin: 15px auto 0
+
+
+	.block-2
+		&-cell
+		&-content
+			margin-bottom: 30px
+			&-title
+				min-height: auto
+				padding: 0
+
+
+	.float-r
+		float: none
+	.float-l
+		float: none
+
+
+
+	.block-text
+		.img-wrap
+			margin: 0 auto 20px
+		.mt-20
+			margin-top: 20px
+		table
+			width: 80%
+			min-width: auto
+			thead tr 
+				position: absolute
+				top: -9999em
+				left: -9999em
+
+			tr, td 
+				display: block
+				position: relative
+
+			td 
+				border: none
+				border-bottom: 0.125em solid #fece0a
+				padding-left: 50%
+				background-image: none
+				&::before 
+					content: attr(data-label)
+					display: inline-block
+					font-weight: bold
+					line-height: 1.5
+					margin-left: -95%
+					width: 100%
+					color: #000
+				&::after
+					content: ''
+
+			tr:last-child
+				td:last-child
+					border-bottom: none
+
+			.img-cell
+				display: inline-block
+				width: 100%
+				position: absolute
+				top: -2px
+				transform: translateX(-30px)
+				border: none
+		.text-img-gallery
+			display: block
+			margin-top: 20px
+			padding: 0
+			.img-wrap
+				&-sm, &-md, &-lg
+					overflow: hidden
+					margin: 0 auto 20px
+					&:last-child
+						margin-bottom: 0
+
+
+
+
+
+	.block-6
+		background: #208ea5
+		&-cell
+			width: 100%
+			float: none
+		&-item
+			margin-bottom: 30px
+			&-text
+				padding: 0 20%
+
+
+
+	.block-7
+		&-slider-wrap
+			padding: 0
+		.slick-7-prev
+			left: 3%
+		.slick-7-next
+			right: 3%
+	
+
+
+
+	.block-8
+		background: #208ea5
+		&-cell
+			width: 100%
+			float: none
+			margin-left: auto
+			margin-right: auto
+
+
+
+
+	.block-9
+		&-cell
+			width: 100%
+			float: none
+
+
+	.footer 
+		&-cell-1
+			width: 50%
+		&-cell-2
+			width: 100%
+		&-cell-3
+			width: 50%
+			max-width: 255px
+
+		&-nav
+			padding-top: 20px
+			li
+				margin-top: 5px
+
+	.er404
+		font-size: .5em
+
+	/**/
+
+
+@media only screen and (max-width : 576px)
+
+
+	.header-nav
+		display: none
+		position: fixed
+		min-width: 260px
+		float: right
+		top: 70px
+		right: 25px
+		overflow-y: auto
+		overflow-x: hidden
+
+		.header-nav-list
+			display: block
+			overflow-y: auto
+	
+		li 
+			display: block
+			padding: 0
+			text-align: center
+			background-color: #208ea5
+			opacity: .9
+			border-bottom: 1px solid rgba(255,255,255,.7)
+			&:last-child
+				border-bottom: none
+
+		.header-nav-link
+			display: block
+			padding: 10px
+			line-height: 40px
+			text-transform: uppercase
+			transition: all .5s
+			color: #fff
+			text-decoration: none
+			&:hover
+				background-color: rgb(109, 200, 136)
+
+	.mob-menu
+		display: inline-block
+
+
+	.header, .footer
+		&-cell-1
+			width: 100%
+			float: none
+		&-cell-2
+			width: 100%
+		&-cell-3
+			width: 100%
+			max-width: 100%
+			float: none
+		.contacts
+			max-width: 290px
+			margin: 0 auto
+			padding-top: 20px
+
+		&-nav
+			&-list
+
+	.logo
+		top: 0
+		margin: 0 auto
+
+
+	.block-1-button
+		max-width: 290px
+		font-size: 16px
+
+
+	.block-2
+		&-cell
+			width: 100%
+			padding: 0
+			float: none
+		&-content
+			margin-bottom: 30px
+			&-title
+				min-height: auto
+				padding: 0
+
+
+	.block-3
+
+		.string
+			display: block
+
+		&-cell-1, &-cell-2
+			width: 100%
+			float: none
+
+		&-info
+			margin-bottom: 30px
+
+
+
+	.breadcrumbs
+		padding: 0 10px
+		> span + span:before
+			padding: 0 3px
+
+	.block-text
+		font-size: .8888888888888889em
+		table
+			width: 100%
+		ul, ol
+			li
+				width: 100% !important
+				float: none !important
+
+
+
+
+	.block-5
+		&-item
+			min-height: 100px
+			padding: 0 5px
+		&-text
+			padding-left: 10px
+			font-size: 1.125em
+
+		&-buttons
+			width: 50%
+
+
+
+	.block-6
+		&-item
+			&-text
+				padding: 0 10%
+
+
+
+	.footer 
+		.string
+			display: block
+			display: flex
+			flex-direction: column
+		&-cell-1
+			order: 1
+
+		&-nav
+			padding-bottom: 20px
+
+		.copyright
+			text-align: center
+		.contacts
+			max-width: 260px
+
+
+	.modal
+		max-width: 80%
+		padding-bottom: 20px
+		&-title
+			margin-bottom: 20px
+		&-cell
+			width: 100%
+			float: none
+		&-text
+			text-align: center
+			margin-bottom: 20px
+		&-offer
+			margin-bottom: 10px
+
+		&-form
+			width: 100%
+			max-width: 300px
+			margin: 0 auto
+
+
+	.er404
+		padding-top: 5vh
+		font-size: .4em
+
+	/**/
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 480px)
+
+
+	.block-1
+		font-size: .9em
+
+		&-img-wrap
+			max-width: 290px
+			height: 300px
+
+
+	.block-3
+		.block-3-form
+			max-width: 100%
+
+
+	.block-text
+		table
+			font-size: 13px
+			td
+				&::before 
+					width: 95%
+			.img-cell
+				transform: translate(-27px,-1px)
+
+	.block-5
+		&-offer
+			font-size: 1.5em
+		&-info
+			font-size: 1em
+		&-buttons
+			width: 290px
+
+
+	.block-6
+		&-item
+			&-text
+				padding: 0 5%
+
+
+
+
+	.block-9
+		font-size: .9em
+		&-address
+			padding: 10px
+		&-address-close
+			&::before
+				top: 50%
+			&-btn
+				top: -13px
+				right: -4px
+
+
+
+	.modal
+		max-width: 90%
+		&-title
+			margin-bottom: 20px
+		&-text
+			margin-bottom: 20px
+		&-offer
+			margin-bottom: 10px
+
+
+
+	.scroll-button-wrap
+		display: none !important
+
+	.call-button
+		transform: scale(.8)
+
+
+	/**/
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 320px)
+	.block-9-address-close::before
+		top: 25%
+	/**/
+
+
+
+
+
+@media (min-width: 768px)
+	.wrap, .block-text
+		width: 750px
+
+@media (min-width: 992px)
+	.wrap, .block-text
+		width: 992px
+
+@media (min-width: 1042px)
+	.wrap, .block-text
+		width: 1042px
