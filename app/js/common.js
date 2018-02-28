@@ -224,6 +224,19 @@ $(function() {
 		$('.slider-nav').slick('slickPrev');
 	});
 
+	$('.slider-otzuvu').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false
+	});
+		$('.slider-otzuvu-next').on('click', function() {
+		$('.slider-otzuvu').slick('slickNext');
+	});
+	$('.slider-otzuvu-prev').on('click', function() {
+		$('.slider-otzuvu').slick('slickPrev');
+	});
+
 
 	$('.navicon').on('click', function () {
 		$(this).toggleClass('navicon--active');
