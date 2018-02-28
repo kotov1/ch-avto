@@ -130,26 +130,24 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
-// html, body
-// 	height: 100%
 
 body
 	max-width: 1920px
 	min-width: 320px
 	margin: 0 auto
 	position: relative
-	font: 16px/1.65 $default-font-family
+	font: 16px/1.4 $default-font-family
 	overflow-x: hidden
 
-.responsive-img
+.responsive-image
 	display: block
 	max-width: 100%
 	height: auto
 
-.nowrap
+.no-wrap
 	white-space: nowrap
 
-.text-center
+.ta-center
 	text-align: center
 
 ::selection
@@ -157,16 +155,28 @@ body
 	color: #fff
 
 
-.wrap
+.xcontainer
+	width: 100%
 	margin-right: auto
 	margin-left: auto
 	padding-left: 15px
 	padding-right: 15px
-	&:before, &:after
-		content: " "
-		display: table
 
-.string
+.xrow
+	display: flex
+	flex-wrap: wrap
+	margin-right: -15px
+	margin-left: -15px
+
+.no-padding
+	margin-right: 0
+	margin-left: 0
+	> .xcol
+		padding-right: 0
+		padding-left: 0
+
+
+.frow
 	&:before, &:after
 		content: " "
 		display: table
@@ -176,16 +186,18 @@ body
 		content: " "
 		display: table
 
-.clear:after, .wrap:after, .string:after
+.clear:after, .fcontainer:after, .frow:after
 	clear: both
 
-.cell
+.xcol, .fcol
 	position: relative
 	min-height: 1px
+	padding-right: 15px
+	padding-left: 15px
+.xcol
+	width: 100%
+.fcol
 	float: left
-
-.img-wrap
-	overflow: hidden
 
 
 // ==============================================================
@@ -194,517 +206,361 @@ ol, ul
 	padding-left: 0
 	list-style-type: none
 
-.block-title-wrap
-	text-align: center
-.block-title
-	display: inline-block
+
+.section-head
 	margin: 0
 	padding: 0
 	font: 1.875em/1 $title-font-family
 	text-align: center
 	text-transform: uppercase
 	color: $title-color
-	border: 4px solid #ffdd50
-	border-left: none
-	border-right: none
 
 
-.button
-	display: inline-block
-	width: 100%
-	padding: 5px
-	border: none
+.btn
+	border-radius: 5px
+	border: 1px solid #fff
 	outline: none
-	color: #fff
+	font: 12px $title-font-family
 	text-transform: uppercase
-	text-align: center
-	font-family: $title-font-family
-	border-radius: $bd-rad
+	cursor: pointer
+	color: #fff
+	background-image: linear-gradient( to top, rgba(10,72,156,.97) 0%, rgba(18,151,236,.97) 100%), repeating-linear-gradient(-45deg, transparent, transparent 15%, rgba(0,0,0,.6) 15%, rgba(0,0,0,.6) 30%)
 	transition: all .3s
 	&:hover
+		box-shadow: inset 0 0 20px 5px rgba(255,255,255,.35)
+		background-position: -1000px 0
 		transition: all .3s
 	&:active
 		transform: translate(1px, 1px)
-		transition: all .3s
 
-
-.mob-menu 
-	display: none
-	position: fixed
-	top: 22px
-	right: 22px
-	width: 28px
-	margin: 0 auto
-	float: right
-	cursor: pointer
-	z-index: 100
-
-.mob-menu span:after,
-.mob-menu span:before 
-	content: ""
-	position: absolute
-	right: 0px
-	top: -9px
-
-.mob-menu span:after
-	top: 9px
-
-.mob-menu span 
-	position: relative
-	display: inline-block
-
-
-.mob-menu span,
-.mob-menu span:after,
-.mob-menu span:before 
-	width: 100%
-	height: 3px
-	background-color: #000
-	transition: all 0.3s
-	backface-visibility: hidden
-	border-radius: 2px
-
-.mob-menu.on span 
-	background-color: transparent
-
-.mob-menu.on span:before 
-	transform: rotate(45deg) translate(5px, 5px)
-
-.mob-menu.on span:after 
-	transform: rotate(-45deg) translate(7px, -8px)
-
-.mob-menu.on + .header-nav
-	display: block
-	z-index: 100
-	height: 100%
 
 .slick
 	&-arrow
 		display: inline-block
 		position: absolute
-		top: 42%
-		width: 15px
-		height: 21px
 		background-image: url('../img/slider-arrows.png')
 		background-repeat: no-repeat
 		z-index: 1
 		cursor: pointer
 	
-	&-prev
-		background-position: 0 0
-		left: -12%
-		&:hover
-			background-position: 0 100%
-	&-next
-		background-position: 100% 0
-		right: -12%
-		&:hover
-			background-position: 100% 100%
 
 
-.breadcrumbs
-	padding: 0 30px
-	list-style: none
-	border-radius: 4px
-	font-size: 1.125em
-	>
-		span
-			display: inline-block
-			+ span:before
-				padding: 0 5px
-				color: #616161
-				content: "»"
-			a
-				color: #2da2c3
-				&:hover
-					color: $accent-color
-
-			&:last-child
-				a
-					color: #616161
-					text-decoration: none
-					cursor: default
-					&:hover
-						color: #616161
-
-
-.float-r
+.float-right
 	float: right
-.float-l
+.float-left
 	float: left
 
-.img-wrap
-	max-width: 212px 
+
+.slide
+	outline: none
+
+
+.image-wrap
+	overflow: hidden
+	max-width: 182px 
 	margin: 0 auto
-	height: 141px
-	background-color: #b8b8b8
+	height: 126px
+	background-color: #2a456e
 	border-radius: 10px
+
+
+.icon
+	float: left
+	background: url('../img/sprite.png') no-repeat
 
 // ==========================================================
 
-.page-box
+.xwrapper
 	max-width: 1920px
 	margin: 0 auto
 
 
 
 
+.section-1
+	padding: 20px 0 40px
+	background: #06364c url('../img/top-bg.png') no-repeat
+	background-size: cover
+	background-position: 50% 0
+	color: #fff
 
-.header
-	width: 100%
-	min-height: 100px
-	position: fixed
-	top: 0
-	z-index: 2
-	padding: 15px 0
-	background-color: #fff
 
-	&-cell-1
-		width: 27%
-	&-cell-2
-		width: 47%
-		right: 26%
-	&-cell-3
-		width: 26%
-		left: 48%
-
-.logo
-	width: 253px
-	height: 84px
-	position: relative
-	top: 8px
-	font: 1.5em $title-font-family
-	text-align: center
-	color: #000
-	&-image
-		position: absolute
-		top: 0
-		left: 0
+.logotype
+	&-img
+		float: left
+		width: 57px
+		height: 66px
+	&-text-wrap
+		margin-left: 65px
+		font-family: $title-font-family
 	&-text
-		width: 67%
-		position: absolute
-		top: 47%
-		left: 61%
-		transform: translate(-50%, -50%)
+		font-size: 42px
+		line-height: 1
+		text-transform: uppercase
+		color: #a2aeb8
+		&-colored
+			color: #0075a7
+		&-smaller
+			font-size: 30px
+	&-descr
+		padding-left: 3px
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 3px
+		color: #fff
 
+.head
+	margin-bottom: 30px
+	&-xcol-1
+		flex: 0 0 35%
+		max-width: 35%
+	&-xcol-2
+		flex: 0 0 38%
+		max-width: 38%
+	&-xcol-3
+		flex: 0 0 27%
+		max-width: 27%
 
-.header-nav
-	min-height: 100px
-	height: 1px
-	display: flex
-	justify-content: center
-	align-items: flex-end
-	&-list
-		width: 100%
-		padding-bottom: 10px
-		display: flex
-		justify-content: space-around
-		font-family: 'MerriweatherBold', sans-serif
-		li
-			text-align: center
-	&-link
-		display: block
-		cursor: pointer
-		color: #000
-		text-decoration: none
-		transition: all .3s
-		&:hover
-			color: $accent-color
-			text-decoration: none
-			transition: all .3s
-		&:visited
-			color: #2197b0
+	&-info
+		padding-right: 10px
+		text-align: right
+		font-size: 16px
+		line-height: 1.4
+		font-style: italic
+		color: #fff
+	&-worktime, &-address
+		margin: 0
+	&-worktime
+		margin-bottom: 10px
 
 
 .contacts
-	padding-top: 8px
-	.tel, .whatsapp
-		position: relative
-		margin-bottom: 4px
-		padding-left: 25px
-		font-size: 18px
-		line-height: 1.3
-		&::before
-			content: ''
-			display: inline-block
-			width: 19px
-			height: 18px
-			position: absolute
-			top: 2px
-			left: 0
-			background: url('../img/sm-sprite.png') no-repeat
-	.tel
-		&::before
-			background-position: 0 0
-	.whatsapp
-		&::before
-			background-position: -27px 0
-
-	a
-		float: right
-		font: 18px $title-font-family
+	display: flex
+	align-items: center
+.phones-wrap
+	margin-left: 20px
+.phone-link
+	font-size: 22px
+	color: #fff
+	cursor: default
+	&:hover
+		color: #fff
 		text-decoration: none
-		color: #000
-		cursor: default
+.head-phone-icon
+	width: 29px
+	height: 44px
+	background-position: 0 0
+.head-btn-wrap
+	text-align: center
+.head-btn
+	width: 163px
+	padding: 12px 0
+
+
+
+
+
+.menu-wrap
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin: 20px 0 0
+	padding-right: 55px
+
+.page-nav
+	width: 100%
+
+.toggle__menu
+	display: flex
+	justify-content: space-between
+	background-image: linear-gradient(to right, transparent, rgba(255,255,255,.1) 50%, transparent)
+
+	li
+		width: 100%
+		text-align: center
+	.menu-link
+		display: block
+		padding: 20px 0
+		color: #fff
+		font: 16px $title-font-family
+		text-transform: uppercase
+		cursor: pointer
+		text-decoration: none
+		transition: linear 0.3s all
 		&:hover
-			text-decoration: none
-
-	.header-button
-		background-color: rgba(109, 200, 136, .8)
-		&:hover
-			background-color: rgb(109, 200, 136)
+			background-image: linear-gradient(to right, rgba(5,52,72,.4), rgb(5,52,72) 50%, rgba(5,52,72,.4))
+			transition: linear 0.3s all
 
 
 
-
-
-
-
-
-
-
-
-.block-1
-	margin-top: 130px
-	position: relative
-	padding: 30px 0 0
-	background: url('../img/block-1-bg.jpg') no-repeat
-	background-size: cover
-	.wrap
+.remont
+	&-xcol-1
+		flex: 0 0 43%
+		max-width: 43%
+		order: 1
+	&-xcol-2
+		flex: 0 0 23%
+		max-width: 23%
+		order: 2
+	&-xcol-3
+		flex: 0 0 21%
+		max-width: 21%
+		margin-left: 5%
+		order: 3
+	&-xcol-4
+		flex: 0 0 92%
+		max-width: 92%
+		margin-left: 8%
+		order: 4
+		
+	.slider-for-wrap
 		position: relative
-	.cell
-		width: 50%
-	&-cell-1
-		right: 50%
-	&-cell-2
-		left: 50%
-
-	&-img
-		margin: 0 auto
-		&-wrap
-			height: 400px
-			overflow: hidden
-			position: relative
-			text-align: center
-	.master-img
-		position: absolute
-		bottom: 0
-		left: 50%
-		transform: translate(-50%)
-
-	&-title
-		font: 2.5em 'MerriweatherBold', sans-serif
+		.slick-arrow
+			display: none
+	.slider-for
+		margin-top: 20px
+	&-offer-list
+		margin-top: -25px
+		font: 22px $title-font-family
 		text-align: center
-	&-subtitle
-		font: 1.25em $title-font-family
-		text-align: center
-	&-services
-		width: 50%
-		margin: 38px auto 0
-		padding-left: 15px
-		font-size: 1.25em
-		font-weight: bold
-		li
-			display: inline-block
-			margin-bottom: 19px
-			position: relative
-			padding-left: 40px
-			&::before
-				content: ''
-				position: absolute
-				top: 0
-				left: 0
-				display: inline-block
-				width: 27px
-				height: 27px
-				background: url('../img/sm-sprite.png') no-repeat
-				
-			&:first-of-type
-				&::before
-					background-position: -55px 0
-			&:nth-of-type(2)
-				&::before
-					background-position: -93px 0
-			&:last-of-type
-				&::before
-					background-position: -129px 0
+		list-style-type: none
+		color: #bae6f0
+	.slider-nav-wrap
+		position: relative
+	.slider-nav
+		max-height: 514px
+		padding: 50px 0
+		overflow: hidden
+		background-image: linear-gradient(to bottom, transparent, rgba(255,255,255,.25) 50%, transparent)
+		&-prev, &-next
+			width: 31px
+			height: 21px
+			left: 50%
+			transform: translateX(-50%)
+		&-prev
+			top: 0
+			&:hover
+				background-position: 100% 0
+		&-next
+			bottom: 0
+			background-position: 0 100%
+			&:hover
+				background-position: 100% 100%
 
-	&-price, &-button
-		max-width: 343px
-		margin-left: auto
-		margin-right: auto
+	.slider-nav-slide
+		margin-top: 10px
+		overflow: hidden
+	
+
+	.slider-for-image
+		overflow: hidden
+		display: flex
+		min-width: 335px
+		min-height: 370px
+		align-items: center
+		justify-content: center
+	.slider-nav-image
+		overflow: hidden
+		box-shadow: 0 0 10px rgba(0,0,0,.75)
+		border: 1px solid #2a456e
+
+
+
+
+.remont-akpp
+	padding-top: 3px
+	&-text
+		font-size: 20px
+		color: #fff
+		&-upper
+			text-transform: uppercase
+		&-underline
+			margin-top: -6px
+			border-bottom: 1px solid #fff
 
 	&-price
-		margin-bottom: 5px
-		font: 2.25em $title-font-family
-		text-align: center
-		color: #f00
-		background-color: #fff
-		border-radius: $bd-rad
-		.uppercase
-			text-transform: uppercase
-			font-size: .8em
-
-	&-button
-		display: block
-		font-size: 1.25em
-		background-color: rgba(109, 200, 136, .8)
-		&:hover
-			background-color: rgb(109, 200, 136)
-
-	&-slider-wrap
-		position: absolute
-		left: 280px
-		bottom: 145px
-
-	&-slider
-		max-width: 205px
-		height: 114px
-		border: 3px solid $accent-color
-		border-radius: 15px
-		overflow: hidden
-
-	&-slide
-		width: 199px
-		height: 108px
-		
-.slide
-	outline: none
-
-
-
-
-
-
-
-
-
-
-.block-2
-	padding: 45px 0
-	&-title-wrap
-		margin-bottom: 50px
-	&-cell
-		width: 25%
-		padding: 0 20px
-
-	&-content
-		min-height: 150px
-		margin-top: 16px
-		text-align: center
-		font-family: $title-font-family
-
-		&-title
-			min-height: 50px
-			margin-top: 10px
-			padding: 0 10px
-			line-height: 1
-			font-size: 1.5em
-			color: $title-color
-
-		&-price
-			margin-top: -6px
-			font-size: 19px
-			color: #848484
-			text-transform: uppercase
-			.accent
-				font-size: 24px
-
-	&-button
-		max-width: 100%
-		margin-top: 6px
-		font-size: 1.25em
-		text-transform: uppercase
-		color: #000
-		background-color: $accent-color
+		font-size: 30px
 		font-weight: bold
-		&:hover
-			background-color: $accent-hover-color
+		background: linear-gradient(to top, #ac0600, #e88a00)
+		background-position: 0 3px
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		color: #ac0600
+	&-pricing
+		margin-top: 10px
+		font-size: 30px
+		color: #95c3d6
+
+	&-symptoms
+		max-width: 244px
+		padding: 40px 15px 25px
+		background: url('../img/repair-symptoms-bg.png') no-repeat 50% 0
+		background-size: 100%
+		font-size: 14px	
+		line-height: 1.7
+		text-transform: uppercase
+
+.repair-btn-wrap
+	margin-top: 20px
+.repair-btn
+	width: 241px
+	padding: 12px 15px
 
 
 
-
-
-
-
-
-
-
-.block-3
-	padding: 42px 0
-	background: url('../img/block-bg.jpg') no-repeat
-	background-position: center
-	background-size: cover
-	.string
-		display: flex
-		align-items: center
-	&-cell-1
-		width: 26%
-	&-cell-2
-		width: 74%
-
-	&-info
-		padding-left: 20px
-		padding-right: 60px
-		&-question
-			margin: 0
-			font: 1.5em $title-font-family
-			text-transform: uppercase
-			color: #ffd201
-		&-callback
-			margin: 0
-			font: 1.125em $title-font-family
-			color: #fff
-
-	&-form-wrap
-		padding-left: 10px
-	&-form
-		input
-			width: 33%
-			max-width: 213px
-			padding: 12px 30px 12px 15px
-			color: #616161
-			border: 1px solid rgba(45, 162, 195,.7)
-			border-radius: 5px
-
-	.label-name, .label-tel
-		margin-right: 39px
-		position: relative
-		&::after
-			content: ''
-			display: inline-block
-			width: 22px
-			height: 22px
-			position: absolute
-			top: 1px
-			right: 10px
-			z-index: 1
-			background: url('../img/sm-sprite.png') no-repeat
-			
-	.label-name
-		&::after
-			background-position: -165px 0
-	.label-tel
-		&::after
-			background-position: -189px 0
-
-	.form-button
-		position: relative
-		top: 1px
-		width: 33%
-		max-width: 213px
-		padding: 10px
-		font-size: 20px
-		line-height: 1.6
-		background-color: rgba(109, 200, 136, .8)
-		&:hover
-			background-color: rgb(109, 200, 136)
-
-		&:disabled
-			background-color: rgb(109, 200, 136)
-			&:hover
-				background-color: rgb(109, 200, 136)
+.repair-attention
+	margin-top: 20px
+	padding: 17px 35px
+	display: flex
+	align-items: center
+	font-weight: bold
+	border: 2px dotted #084c68
+	border-right: none
+	border-top-left-radius: 100px
+	border-bottom-left-radius: 100px
 	
+	&-symbol
+		display: block
+		font-size: 90px
+		line-height: 70px
+		color: #158bbd
+		margin-right: 25px
+	&-text
+		font-style: italic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -886,482 +742,7 @@ ol, ul
 
 
 
-.block-5
-	padding: 25px 0
-	background: url('../img/block-5-bg.jpg') no-repeat
-	background-size: cover
-	&-title
-		margin-bottom: 24px
-	&-cell
-		width: 50%
-		padding: 0 10px
-	&-item
-		min-height: 125px
-		height: 1px
-		display: flex
-		align-items: center
-		margin-bottom: 20px
-		padding: 0 25px
-		background-color: #fff
-		box-shadow: 4px 4px 21px rgba(153, 180, 195, .75)
-	&-icon
-		flex: 0 0 65px
-		width: 65px
-		height: 76px
-		background: url('../img/bg-sprite.png') no-repeat
-		&-1
-			background-position: 5px 50%
-		&-2
-			background-position: -66px 6px
-		&-3
-			background-position: -139px 50%
-		&-4
-			background-position: -206px 50%
-		&-5
-			background-position: -274px 50%
-		&-6
-			background-position: -347px 7px
-		&-7
-			background-position: -420px 50%
-		&-8
-			background-position: -499px 50%
-	&-text
-		padding-left: 25px
-		font-size: 1.5em
-		line-height: 1.2
-		color: #1b98b1
-		&-accent
-			font-family: $title-font-family
 
-
-	&-offer
-		margin-top: 16px
-		font: 1.875em $title-font-family
-		color: #1b98b1
-		text-align: center
-		text-transform: uppercase
-
-	&-info
-		margin-top: 8px
-		font-size: 1.125em
-		color: #666
-		text-align: center
-		text-transform: uppercase
-
-	&-buttons
-		width: 45%
-		margin: 22px auto 0
-	&-button
-		padding: 10px 5px
-		width: 48%
-		font-size: 1.25em
-		
-
-		&-bid
-			float: left
-			background-color: $accent-color
-			color: #000
-			&:hover
-				background-color: $accent-hover-color
-		&-call
-			float: right
-			background-color: #1f8ea4
-			&:hover
-				background-color: #0e5d6d
-
-
-
-
-
-
-
-.block-6
-	position: relative
-	padding: 25px 0 36px
-	background: url('../img/block-bg.jpg') no-repeat
-	background-position: center
-	background-size: cover
-	border-top: 36px solid #fff
-	z-index: 1
-	&::after
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		background: url('../img/curve.png') no-repeat
-		background-position: center
-		width: 100%
-		height: 100%
-		z-index: -1
-
-	&-cell
-		width: 33.33333333%
-	
-	&-title
-		margin-bottom: 62px
-		color: #fff
-
-	&-number
-		width: 75px
-		height: 75px
-		line-height: 75px
-		margin: 0 auto
-		background: url('../img/circle.png') no-repeat
-		color: $accent-color
-		font-size: 36px
-
-	&-item
-		text-align: center
-		&-title
-			margin-top: 17px
-			font-size: 1.5em
-			color: $accent-color
-		&-text
-			margin-top: 4px
-			line-height: 1.1
-			font-size: 1.125em
-			color: #fff
-
-
-
-
-
-.block-7
-	padding: 43px 0
-	&-slider-wrap
-		position: relative
-		margin-top: 35px
-		padding: 0 35px
-	&-slider
-		&-img-wrap
-			max-width: 280px
-			height: 200px
-			border-radius: 0
-	&-slide
-		outline: none
-
-.slick-7-prev,.slick-7-next
-	transform: scale(1.2)
-.slick-7-prev
-	left: 0
-.slick-7-next
-	right: 0
-
-
-
-
-
-.block-8
-	padding: 25px 0 36px
-	background: url('../img/block-bg.jpg') no-repeat
-	background-position: center
-	background-size: cover
-	&-cell
-		width: 20%
-	&-title
-		margin-bottom: 49px
-		color: #fff
-	&-item
-		text-align: center
-	&-fact
-		color: $accent-color
-		font-size: 36px
-	&-descr
-		margin-top: 4px
-		padding: 0 23px
-		line-height: 1.1
-		font-size: 1.125em
-		color: #fff
-	&-button-wrap
-		margin-top: 58px
-		text-align: center
-	&-button
-		max-width: 268px
-		padding: 10px 5px
-		font-size: 1.25em
-		background-color: $accent-color
-		color: #000
-		&:hover
-			background-color: $accent-hover-color
-
-
-
-
-
-
-.block-9
-	padding: 33px 0 16px
-	&-title
-		margin-bottom: 26px
-	&-cell
-		width: 50%
-		padding: 10px
-
-	&-locations
-		background-color: #ececec
-
-	&-address-wrap
-		padding: 10px
-
-	&-address
-		position: relative
-		// margin-bottom: 13px
-		padding: 12px 20px
-		border: 4px solid $accent-color
-		color: #000
-		line-height: 1.4
-		border-radius: $bd-rad
-		cursor: pointer
-		transition: all .3s
-		&:hover
-			border-color: #ffa200
-			transition: all .3s
-
-		&-close
-			.block-9-address-img-wrap, .block-9-address-hide, .link-show
-				display: none
-			.write-link
-				display: inline-block !important
-			&::before
-				content: ''
-				display: inline-block
-				width: 23px
-				height: 24px
-				position: absolute
-				top: 40%
-				right: 53px
-				background: url('../img/sm-sprite.png') no-repeat
-				background-position: -217px 0
-
-			&-btn
-				top: -13px
-				right: 20px
-				position: absolute
-				background: red
-				color: #fff
-				font-size: 12px
-				padding: 3px 5px
-				border-radius: 5px
-				cursor: pointer
-		&-img
-			margin: 5px
-			width: 100px
-			height: 72px
-
-
-		&-title
-			font: 1.25em $title-font-family
-		&-descr, &-time
-			font-size: 1.125em
-		&-descr
-			margin-top: 3px
-		&-time
-			margin-top: -4px
-
-		&-hide
-			display: block
-			margin-top: 30px
-			padding-top: 10px
-			border-top: 1px solid #000
-			font-size: 18px
-			&-cell-1
-				width: 66.66666666666666%
-				font-weight: bold
-				a
-					text-decoration: none
-					color: #000
-			&-cell-2
-				width: 33.33333333333333%
-				text-align: right
-	.map
-		width: 100%
-		height: 330px
-		overflow: hidden
-
-	.write-link
-		display: none
-		font-size: 18px
-		text-decoration: underline
-		cursor: pointer
-		color: #0042ff
-		transition: all .3s
-		&:visited
-			color: #609
-		&:hover
-			text-decoration: none
-		&:active
-			color: $accent-color
-
-	.link-show
-		display: inline-block
-
-
-
-
-
-
-.block-10
-	padding-top: 0
-	padding-bottom: 55px	
-
-
-
-
-
-
-.footer
-	min-height: 190px
-	padding: 12px 0
-	background-color: #363434
-	background-image: linear-gradient(to top, #232122, #363434)
-	color: #fff
-
-	&-cell-1
-		width: 29%
-	&-cell-2
-		width: 45%
-		right: 26%
-	&-cell-3
-		width: 26%
-		left: 45%
-
-	&-nav
-		padding-top: 17px
-		li
-			line-height: 1.2
-
-		&-link
-			font-size: 1.125em
-			cursor: pointer
-			color: #fff
-			text-decoration: none
-			transition: all .3s
-			&:hover
-				color: $accent-color
-				text-decoration: underline
-				transition: all .3s
-
-	&-call
-		margin-top: 10px
-		font-size: .875em
-		text-align: center
-
-	&-button
-		max-width: 185px
-		padding: 10px
-		font-size: 1.125em
-		color: #000
-		background-color: $accent-color
-		&:hover
-			background-color: $accent-hover-color
-
-	.button-wrap
-		text-align: center
-
-
-	.copyright
-		margin-top: 15px
-		font-size: 1.125em
-
-
-
-	.contacts
-		padding-top: 8px
-		.tel, .whatsapp
-			a
-				color: #fff
-
-
-
-
-
-
-
-
-
-
-
-
-
-.modal
-	max-width: 620px
-	min-height: 280px
-	margin: 0 auto
-	background-color: #fff
-	&-wrap
-		position: relative
-	&-title
-		margin-bottom: 50px
-		font: 24px $title-font-family
-		color: $accent-color
-		text-transform: uppercase
-		text-align: center
-		padding: 10px 0
-		border-bottom: 1px solid #fffd5f
-
-	&-cell
-		width: 50%
-		padding: 0 30px
-
-	&-text
-		font-size: 16px
-		line-height: 1.2
-		color: #363636 
-	&-offer
-		margin-bottom: 20px
-		font-family: $title-font-family
-
-
-	&-form
-		input
-			width: 100%
-			margin-bottom: 15px
-			padding: 12px 15px
-			background-color: #fff
-			border: 2px solid $accent-color
-			border-radius: $bd-rad
-			font-size: 14px	
-			line-height: 1.2
-			outline: none
-
-			&::-webkit-input-placeholder
-				color: #000
-				opacity: 1
-				font-size: 16px
-
-			&:-moz-placeholder
-				color: #000
-				opacity: 1
-				font-size: 16px
-
-			&::-moz-placeholder
-				color: #000
-				opacity: 1
-				font-size: 16px
-
-			&:-ms-input-placeholder
-				color: #000
-				opacity: 1
-				font-size: 16px
-
-			&:focus:required:invalid
-				border-color: rgba(255,0,0,.5) 
-
-		&-button
-			font-size: 20px
-			color: #000
-			background-color: $accent-color
-			&:hover
-				background-color: $accent-hover-color
-			&:disabled
-				background-color: $accent-hover-color
-				&:hover
-					background-color: $accent-hover-color
-
-
-	.mfp-close
-		top: 12px
-		right: 11px
 
 .mfp-close
 	display: block
@@ -1379,23 +760,6 @@ ol, ul
 
 
 
-.modal-tel
-	max-width: 350px
-	min-height: auto
-	padding: 0 20px 20px
-
-	.modal-wrap
-		padding-top: 40px
-
-
-	.modal-text
-		margin-bottom: 15px
-		font: 18px $title-font-family
-		text-transform: uppercase
-		color: #2da2c3
-		text-align: center
-	.mfp-close
-		right: 0
 
 
 
@@ -1441,8 +805,6 @@ ol, ul
 	width: 75px
 	height: 75px
 	z-index: 2000
-
-
 
 .scroll-button
 	display: inline-block
@@ -1538,7 +900,7 @@ ol, ul
 		text-rendering: auto
 		line-height: 1
 		&-phone:before
-	 		 content: "\f095"
+			 content: "\f095"
 
 
 @keyframes phone

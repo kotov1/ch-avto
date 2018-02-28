@@ -1,125 +1,208 @@
 @import "vars"
 
 
-@media only screen and (max-width : 1042px)
-	.block-3
-		.block-3-form input, .form-button
-			max-width: 200px
+@media only screen and (max-width : 1199px)
 
+
+	.head
+		margin-bottom: 50px
+		&-xcol-1
+			flex: 0 0 50%
+			max-width: 50%
+		&-xcol-2
+			flex: 0 0 50%
+			max-width: 50%
+		&-xcol-3
+			flex: 0 0 100%
+			max-width: 100%
+	
+		&-info
+			padding-right: 0
+
+	.contacts
+		margin-top: 20px
+		justify-content: center
+
+	.head-btn-wrap
+		margin-left: 0
+
+
+
+	.remont-akpp-symptoms
+		background-size: 100% 100%
+		padding-bottom: 15px
+	.remont-akpp-text
+		font-size: 18px
+	.remont-akpp-pricing
+		font-size: 26px
+	.repair-btn
+		width: 100%
+
+
+
+	/**/
 
 @media only screen and (max-width : 991px)
 
-	.header, .footer
-		&-cell-1
-			width: 36%
-		&-nav
-			min-height: 50px
-			padding: 0
-		&-cell-2
-			width: 100%
-			right: 0
-		&-cell-3
-			width: 36%
-			float: right
+	.menu-wrap
+		display: block
+		padding-right: 0
+
+	.navicon
+		background: transparent
+		position: fixed
+		top: 72px
+		right: 15px
+		height: 15px
+		width: 40px
+		display: block
+		z-index: 101
+		transition: linear 0.3s all
+		&:before, &:after
+			background: #fff
+			backface-visibility: hidden
+			content: ""
+			height: 3px
 			left: 0
+			transition: 0.8s ease
+			width: 40px
+		&:before
+			box-shadow: #fff 0 14px 0 0
+			position: absolute
+			top: 0
+		&:after
+			position: absolute
+			top: 28px
 
+	.navicon--active
+		top: 52px
+		transition: linear 0.3s all
+		&:before
+			box-shadow: transparent 0 0 0 0
+			top: 15px
+			transform: rotate(225deg)
+		&:after
+			top: 15px
+			transform: rotate(315deg)
 
-	.block-1
-		margin-top: 150px
-		&-services
-			width: 65%
+	.toggle
+		display: block
+		height: 100%
+		position: fixed
+		top: 10%
+		right: 5%
+		z-index: 100
+		overflow-x: hidden
+		overflow-y: auto
+		margin: 20px auto
+		background-color: $accent-color
+		padding: 15px
+		display: block
+		opacity: 0
+		box-shadow: 0 0 20px rgba(255,255,255,.1)
+		transition: ease-in 0.5s all
+		transform: translateY(-200%)
+		min-width: 290px
 
-		&-slider-wrap
-			left: 42%
-			transform: translateX(-50%)
-			bottom: 200px
+	.toggle--active
+		display: block
+		opacity: 1
+		transition: ease-in 0.5s all
+		transform: translateY(0)
 
-
-	.block-2
-		padding-bottom: 0
-		&-cell
-			width: 50%
+	.toggle__menu
+		display: block
+		background-image: none
+		li
+			margin: 10px auto
+		a
+			text-decoration: none
+			color: #000
+			display: block
 			text-align: center
-		&-content
-			margin-bottom: 50px
-			&-title
-				padding: 0 65px
-		&-button
-			max-width: 213px
+			font-size: 17px
+			text-transform: uppercase
+			border-bottom: 2px solid transparent
+			transition: linear 0.3s all
+			font-weight: 500
+			padding: 5px 0
+			&:hover
+				color: #db5523
+				border-bottom: 1px solid #fff
+				transition: linear 0.3s all
 
 
-	.block-3
-		&-cell-1, &-cell-2
-			width: 50%
 
-		&-info
-			padding: 0
-			text-align: center
 
-		.block-3-form
-			max-width: 80%
-			margin: 0 auto
 
-		.label-name, .label-tel
-			margin-right: 0
-			margin-bottom: 20px
 
-		.block-3-form input, .form-button
+
+
+
+
+
+	.logotype
+		&-text
+			font-size: 40px
+		&-descr
+			letter-spacing: 2px
+
+	.head-info
+		font-size: 14px
+
+
+
+
+	.remont
+		&-xcol-1
+			flex: 0 0 100%
 			max-width: 100%
-			width: 100%
-		.block-3-form input
-			margin-bottom: 20px
+			order: 0
+		&-xcol-2
+			flex: 0 0 100%
+			max-width: 100%
+			order: 0
+		&-xcol-3
+			flex: 0 0 100%
+			max-width: 100%
+			margin-left: 0
+			order: 0
+		&-xcol-4
+			flex: 0 0 100%
+			max-width: 100%
+			margin-left: 0
+			order: 0
+		.slider-nav
+			max-height: 100%
+			padding: 5px 50px 15px
+			background-image: linear-gradient(to right, transparent, rgba(255,255,255,.25) 50%, transparent)
+			&-prev, &-next
+				width: 31px
+				height: 21px
+				top: 50%
+			&-prev
+				left: 0
+				transform: translateY(-50%) rotate(-90deg)
+				&:hover
+					background-position: 100% 0
+			&-next
+				left: auto
+				right: 0
+				transform: translateY(-50%) rotate(-90deg)
+				background-position: 0 100%
+				&:hover
+					background-position: 100% 100%
 
-
-
-	.block-5
-		&-cell
-			width: 100%
-
-		&-button
-			float: none
-			width: 100%
-			&-bid
-				margin-bottom: 15px
-
-
-
-
-	.block-6
-		&::after
-			display: none
-		&-cell
-		&-item
-			&-text
-				br
-					display: none
-
-
-
-	.block-8
-		&-cell
-			width: 50%
-			margin-bottom: 30px
-			&:last-child
-				float: none
-				margin-left: auto
-				margin-right: auto
-
-
-
-	.block-9
-		&-address
-			&::before
-				right: 25px
-
-
-
-	.footer
-		&-nav-list
-			text-align: center
-		.contacts
-			padding-top: 18px
-
+	.remont-akpp
+		margin-top: 30px
+		text-align: center
+	.remont-akpp-text
+		display: inline-block
+	.remont-akpp-symptoms
+		margin-left: auto
+		margin-right: auto
+	.repair-btn
+		width: 241px
 
 
 	/**/
@@ -128,66 +211,44 @@
 
 @media only screen and (max-width : 767px)
 
-	.header
-		&-cell-1
-			width: 39%
-		&-cell-2
-			width: 100%
-		&-cell-3
-			width: 46%
-			max-width: 251px
-
-	.header
-		position: static
-
-	.block-1
-		margin-top: 0
-		.cell
-			width: 100%
-			float: none
-			right: auto
-			left: auto
-
-		&-services
-			width: auto
-			li
-				display: block
-				width: 235px
-				margin-left: auto
-				margin-right: auto
-
-		&-img-wrap
-			margin: 30px auto 0
-			max-width: 360px
-			height: 360px
-			.master-img
-				bottom: auto
-				top: 0
-				max-width: 75%
-
-		&-slider-wrap
-			position: relative
-			transform: none
-			bottom: 0
-			left: auto
-			right: auto
-			max-width: 205px
-			margin: 15px auto 0
-
-
-	.block-2
-		&-cell
-		&-content
-			margin-bottom: 30px
-			&-title
-				min-height: auto
-				padding: 0
-
-
-	.float-r
+	.float-right
 		float: none
-	.float-l
+	.float-left
 		float: none
+
+
+
+
+	.head
+		.xrow
+			display: block
+		&-xcol-1
+			max-width: 100%
+		&-xcol-2
+			max-width: 100%
+		&-xcol-3
+			max-width: 100%
+
+		.logotype
+			display: flex
+			justify-content: center
+			margin-left: auto
+			margin-right: auto
+			&-text-wrap
+				margin-left: 0
+		&-info
+			margin-top: 20px
+			text-align: center
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -248,62 +309,6 @@
 
 
 
-
-
-	.block-6
-		background: #208ea5
-		&-cell
-			width: 100%
-			float: none
-		&-item
-			margin-bottom: 30px
-			&-text
-				padding: 0 20%
-
-
-
-	.block-7
-		&-slider-wrap
-			padding: 0
-		.slick-7-prev
-			left: 3%
-		.slick-7-next
-			right: 3%
-	
-
-
-
-	.block-8
-		background: #208ea5
-		&-cell
-			width: 100%
-			float: none
-			margin-left: auto
-			margin-right: auto
-
-
-
-
-	.block-9
-		&-cell
-			width: 100%
-			float: none
-
-
-	.footer 
-		&-cell-1
-			width: 50%
-		&-cell-2
-			width: 100%
-		&-cell-3
-			width: 50%
-			max-width: 255px
-
-		&-nav
-			padding-top: 20px
-			li
-				margin-top: 5px
-
 	.er404
 		font-size: .5em
 
@@ -312,104 +317,48 @@
 
 @media only screen and (max-width : 576px)
 
-
-	.header-nav
-		display: none
-		position: fixed
-		min-width: 260px
-		float: right
-		top: 70px
-		right: 25px
-		overflow-y: auto
-		overflow-x: hidden
-
-		.header-nav-list
-			display: block
-			overflow-y: auto
-	
-		li 
-			display: block
-			padding: 0
-			text-align: center
-			background-color: #208ea5
-			opacity: .9
-			border-bottom: 1px solid rgba(255,255,255,.7)
-			&:last-child
-				border-bottom: none
-
-		.header-nav-link
-			display: block
-			padding: 10px
-			line-height: 40px
-			text-transform: uppercase
-			transition: all .5s
-			color: #fff
-			text-decoration: none
-			&:hover
-				background-color: rgb(109, 200, 136)
-
-	.mob-menu
-		display: inline-block
+	.remont
+		.slider-nav-wrap
+			display: none
+		.slider-for-wrap
+			.slick-arrow
+				display: inline-block
+		.slider-for
+			margin-top: 0
+		.slider-for-image
+			min-height: 250px
+			min-width: auto
+			max-width: 220px
+			margin-left: auto
+			margin-right: auto
 
 
-	.header, .footer
-		&-cell-1
-			width: 100%
-			float: none
-		&-cell-2
-			width: 100%
-		&-cell-3
-			width: 100%
-			max-width: 100%
-			float: none
-		.contacts
-			max-width: 290px
-			margin: 0 auto
-			padding-top: 20px
-
-		&-nav
-			&-list
-
-	.logo
-		top: 0
-		margin: 0 auto
-
-
-	.block-1-button
-		max-width: 290px
-		font-size: 16px
-
-
-	.block-2
-		&-cell
-			width: 100%
-			padding: 0
-			float: none
-		&-content
-			margin-bottom: 30px
-			&-title
-				min-height: auto
-				padding: 0
-
-
-	.block-3
-
-		.string
-			display: block
-
-		&-cell-1, &-cell-2
-			width: 100%
-			float: none
-
-		&-info
-			margin-bottom: 30px
+	.remont-offer-list
+		margin-top: -10px
+		font-size: 18px
+	.repair-attention
+		padding: 17px 20px
+	.repair-attention-symbol
+		margin-right: 15px
 
 
 
-	.breadcrumbs
-		padding: 0 10px
-		> span + span:before
-			padding: 0 3px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	.block-text
 		font-size: .8888888888888889em
@@ -423,61 +372,6 @@
 
 
 
-	.block-5
-		&-item
-			min-height: 100px
-			padding: 0 5px
-		&-text
-			padding-left: 10px
-			font-size: 1.125em
-
-		&-buttons
-			width: 50%
-
-
-
-	.block-6
-		&-item
-			&-text
-				padding: 0 10%
-
-
-
-	.footer 
-		.string
-			display: block
-			display: flex
-			flex-direction: column
-		&-cell-1
-			order: 1
-
-		&-nav
-			padding-bottom: 20px
-
-		.copyright
-			text-align: center
-		.contacts
-			max-width: 260px
-
-
-	.modal
-		max-width: 80%
-		padding-bottom: 20px
-		&-title
-			margin-bottom: 20px
-		&-cell
-			width: 100%
-			float: none
-		&-text
-			text-align: center
-			margin-bottom: 20px
-		&-offer
-			margin-bottom: 10px
-
-		&-form
-			width: 100%
-			max-width: 300px
-			margin: 0 auto
 
 
 	.er404
@@ -497,17 +391,21 @@
 @media only screen and (max-width : 480px)
 
 
-	.block-1
-		font-size: .9em
+	.logotype
+		&-text
+			font-size: 36px
+		&-descr
+			letter-spacing: 1px
 
-		&-img-wrap
-			max-width: 290px
-			height: 300px
 
 
-	.block-3
-		.block-3-form
-			max-width: 100%
+
+
+
+
+
+
+
 
 
 	.block-text
@@ -519,44 +417,7 @@
 			.img-cell
 				transform: translate(-27px,-1px)
 
-	.block-5
-		&-offer
-			font-size: 1.5em
-		&-info
-			font-size: 1em
-		&-buttons
-			width: 290px
 
-
-	.block-6
-		&-item
-			&-text
-				padding: 0 5%
-
-
-
-
-	.block-9
-		font-size: .9em
-		&-address
-			padding: 10px
-		&-address-close
-			&::before
-				top: 50%
-			&-btn
-				top: -13px
-				right: -4px
-
-
-
-	.modal
-		max-width: 90%
-		&-title
-			margin-bottom: 20px
-		&-text
-			margin-bottom: 20px
-		&-offer
-			margin-bottom: 10px
 
 
 
@@ -578,22 +439,24 @@
 
 
 @media only screen and (max-width : 320px)
-	.block-9-address-close::before
-		top: 25%
+
 	/**/
 
 
 
-
+@media (min-width: 576px) 
+	.xcontainer 
+		max-width: 540px
+  
 
 @media (min-width: 768px)
-	.wrap, .block-text
-		width: 750px
+	.xcontainer, .block-text
+		max-width: 720px
 
 @media (min-width: 992px)
-	.wrap, .block-text
-		width: 992px
+	.xcontainer, .block-text
+		max-width: 960px
 
-@media (min-width: 1042px)
-	.wrap, .block-text
-		width: 1042px
+@media (min-width: 1200px)
+	.xcontainer, .block-text
+		max-width: 1170px
