@@ -68,16 +68,15 @@
 
 
 
-
-
-
-	.section-4
+	.section-form
 		padding: 25px 0
 		background-image: linear-gradient(90deg, #8795a2 50%, #0074a5 50%)
 		&-xcol-1, &-xcol-2
 			flex: 0 0 50%
 			max-width: 50%
 		&-info
+			display: flex
+			align-items: center
 			padding: 0 100px
 			&::after
 				display: none
@@ -90,16 +89,62 @@
 			margin-bottom: 20px
 			padding-left: 40px
 
-		.section-4-form input, .form-btn
+		.section-form-form input, .form-btn
 			max-width: 220px
 			width: 100%
-		.section-4-form input
+		.section-form-form input
 			margin-bottom: 20px
 		.form-btn
 			margin-left: 40px
 			padding: 8px
 
 
+
+
+	.map-container
+		margin: 0
+
+
+
+
+	.decorated-head-icon::after
+		right: -35px
+
+
+
+
+
+
+
+
+
+
+
+	.footer
+		height: 100%
+		padding: 20px 0
+		&-xcol-1
+			flex: 0 0 40%
+			max-width: 40%
+		&-xcol-2
+			flex: 0 0 30%
+			max-width: 30%
+			display: flex
+			align-items: center
+		&-xcol-3
+			flex: 0 0 30%
+			max-width: 30%
+		&-xcol-4
+			flex: 0 0 100%
+			max-width: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+		.contacts
+			margin-top: 0
+		.copy
+			margin-top: 20px
+			text-align: center
 
 
 	/**/
@@ -141,15 +186,15 @@
 		z-index: 101
 		transition: linear 0.3s all
 		&:before, &:after
-			background: #fff
+			background: #054b69
 			backface-visibility: hidden
 			content: ""
-			height: 3px
+			height: 5px
 			left: 0
 			transition: 0.8s ease
 			width: 40px
 		&:before
-			box-shadow: #fff 0 14px 0 0
+			box-shadow: #054b69 0 14px 0 0
 			position: absolute
 			top: 0
 		&:after
@@ -305,11 +350,55 @@
 
 
 
-	.section-4
+	.section-form
 		&-info
 			padding: 0 35px
 		&-form-wrap
 			padding: 0
+
+
+	.section-5
+		&-locations
+			padding: 0
+		&-address-wrap
+			padding: 10px 0
+		&-address::before
+			top: 23%
+
+
+
+
+
+
+
+	.text-xrow
+		display: block
+	.text-xcol-1, .text-xcol-2
+		max-width: 100%
+
+	.decorated-head-icon
+		max-width: 350px
+		margin: 0 auto
+
+
+
+	.footer
+		background-size: cover
+		&-xcol-1, &-xcol-2, &-xcol-3, &-xcol-4
+			flex: 0 0 100%
+			max-width: 100%
+			display: flex
+			justify-content: center
+		.logotype
+			max-width: 315px
+			margin: 0 auto
+		.footer-info
+			margin-top: 20px
+		.contacts
+			margin-top: 20px
+		.copy
+			margin-top: 20px
+
 
 
 
@@ -372,18 +461,20 @@
 
 
 
+	.section-5
+		.xrow
+			display: block
+		&-xcol
+			min-width: 100%
 
 
 
 
 
 
-
-	.block-text
-		.img-wrap
+	.section-text
+		.imgage-wrap
 			margin: 0 auto 20px
-		.mt-20
-			margin-top: 20px
 		table
 			width: 80%
 			min-width: auto
@@ -395,6 +486,7 @@
 			tr, td 
 				display: block
 				position: relative
+				text-align: left
 
 			td 
 				border: none
@@ -408,7 +500,7 @@
 					line-height: 1.5
 					margin-left: -95%
 					width: 100%
-					color: #000
+					color: #003366
 				&::after
 					content: ''
 
@@ -416,23 +508,28 @@
 				td:last-child
 					border-bottom: none
 
-			.img-cell
+			.image-cell
 				display: inline-block
 				width: 100%
 				position: absolute
 				top: -2px
 				transform: translateX(-30px)
 				border: none
-		.text-img-gallery
+				text-align: left
+
+		.image-gallery
 			display: block
 			margin-top: 20px
 			padding: 0
-			.img-wrap
-				&-sm, &-md, &-lg
-					overflow: hidden
-					margin: 0 auto 20px
-					&:last-child
-						margin-bottom: 0
+
+		.image-wrap
+			margin-left: auto
+			margin-right: auto
+			&-sm, &-md, &-lg
+				overflow: hidden
+				margin: 0 auto 20px
+				&:last-child
+					margin-bottom: 0
 
 
 
@@ -498,7 +595,7 @@
 
 
 
-	.section-4
+	.section-form
 		background: #0074a5
 		.xrow
 			display: block
@@ -525,7 +622,7 @@
 
 
 
-	.block-text
+	.section-text
 		font-size: .8888888888888889em
 		table
 			width: 100%
@@ -533,6 +630,10 @@
 			li
 				width: 100% !important
 				float: none !important
+		blockquote
+			margin: 20px 0
+			padding: 15px 0
+
 
 
 
@@ -572,23 +673,36 @@
 
 
 
+	.section-5
+		&-address::before
+			top: 32%
+			right: 20px
 
 
 
 
+	.section-6
+		padding: 20px 0 40px
+
+	.map-container
+		height: 400px
 
 
-
-
-
-	.block-text
+	.section-text
 		table
 			font-size: 13px
 			td
 				&::before 
 					width: 95%
-			.img-cell
+			.image-cell
 				transform: translate(-27px,-1px)
+
+
+	.decorated-head-icon::after
+		right: 50%
+		transform: translateX(50%)
+		top: auto
+		bottom: -40px
 
 
 
@@ -626,13 +740,13 @@
   
 
 @media (min-width: 768px)
-	.xcontainer, .block-text
+	.xcontainer, .section-text
 		max-width: 720px
 
 @media (min-width: 992px)
-	.xcontainer, .block-text
+	.xcontainer, .section-text
 		max-width: 960px
 
 @media (min-width: 1200px)
-	.xcontainer, .block-text
-		max-width: 1170px
+	.xcontainer, .section-text
+		max-width: 1110px

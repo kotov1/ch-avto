@@ -109,41 +109,38 @@ img
 
 *::-webkit-input-placeholder
 	color: #004c78
-	font-weight: bold
 	opacity: 1
 
 *:-moz-placeholder
 	color: #004c78
-	font-weight: bold
 	opacity: 1
 
 *::-moz-placeholder
 	color: #004c78
-	font-weight: bold
 	opacity: 1
 
 *:-ms-input-placeholder
 	color: #004c78
-	font-weight: bold
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #004c78
-	font-weight: bold
+
 body input:required:valid,
 body textarea:required:valid
 	color: #004c78
-	font-weight: bold
 
 
+html, body
+	overflow-x: hidden
 body
 	max-width: 1920px
 	min-width: 320px
 	margin: 0 auto
 	position: relative
 	font: 16px/1.4 $default-font-family
-	overflow-x: hidden
+	
 
 .responsive-image
 	display: block
@@ -280,6 +277,9 @@ ol, ul
 .icon
 	float: left
 	background: url('../img/sprite.png') no-repeat
+
+.mfp-image
+	cursor: pointer
 
 // ==========================================================
 
@@ -490,6 +490,7 @@ ol, ul
 		display: flex
 		min-width: 335px
 		min-height: 370px
+		height: 1px
 		align-items: center
 		justify-content: center
 	.slider-nav-image
@@ -516,7 +517,7 @@ ol, ul
 		background-position: 0 3px
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
-		color: #ac0600
+		color: #e88a00
 	&-pricing
 		margin-top: 10px
 		font-size: 30px
@@ -575,7 +576,7 @@ ol, ul
 
 
 .section-2
-	padding: 28px 0
+	padding: 0 0 28px
 	position: relative
 	z-index: 1
 	&:before
@@ -590,9 +591,6 @@ ol, ul
 		background-size: cover
 		background-position: 100% 0
 		z-index: -1
-	&-text
-		margin-top: 20px
-		line-height: 1.3
 
 .otzuvu
 	margin-top: 38px
@@ -608,6 +606,9 @@ ol, ul
 		padding: 0 20px
 .slider-otzuvu
 	color: #000
+
+	.slide
+		margin: 0 3px
 
 	&-image-wrap
 		margin-top: 5px
@@ -781,8 +782,8 @@ ol, ul
 
 
 
-.section-4
-	background-image: linear-gradient(90deg, #8795a2 300px, #0074a5 300px)
+.section-form
+	background-image: linear-gradient(90deg, #8795a2 29%, #0074a5 29%)
 	.xrow
 		align-items: center
 	&-xcol-1
@@ -793,6 +794,7 @@ ol, ul
 		max-width: 73%
 
 	&-info
+		min-height: 122px
 		position: relative
 		padding: 15px 0 15px 50px
 		font: 18px $title-font-family
@@ -804,9 +806,9 @@ ol, ul
 			content: ''
 			position: absolute
 			top: 0
-			right: -50px
+			right: -51px
 			display: inline-block
-			border: 59px solid transparent
+			border: 61px solid transparent
 			border-right: 0
 			border-left-color: #8795a2
 			transform: scaleX(.7)
@@ -865,11 +867,28 @@ ol, ul
 			border: 2px solid #fff
 			box-shadow: 0 0 5px rgba(0,0,0,.5), inset 0 0 20px 2px rgba(255,255,255,.6)
 
-		&:disabled
-			background-color: rgb(109, 200, 136)
-			&:hover
-				background-color: rgb(109, 200, 136)
+		// &:disabled
+		// 	background-color: rgb(109, 200, 136)
+		// 	&:hover
+		// 		background-color: rgb(109, 200, 136)
 	
+
+
+
+
+
+
+
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.section-5-head, .remont-akpp-price, .decorated-head
+		background-image: none!important
+
+
+
+
+
 
 
 
@@ -879,62 +898,55 @@ ol, ul
 
 .section-5
 	padding: 33px 0 16px
-	&-title
-		margin-bottom: 26px
+	background: url('../img/s5-bg.jpg') no-repeat
+	background-size: cover
+	background-position: center
+	.xrow
+		align-items: stretch
+	&-head
+		margin-bottom: 15px
+		background-image: linear-gradient(#fff, #cfcfcf 50%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		color: #cfcfcf
 	&-xcol
 		flex: 0 0 50%
 		max-width: 50%
-		padding: 10px
+		padding: 5px 20px
 
 	&-locations
-		background-color: #ececec
+		padding: 0 50px
 
 	&-address-wrap
 		padding: 10px
 
 	&-address
+		height: 100%
+		min-height: 137px
 		position: relative
-		padding: 12px 20px
-		border: 4px solid $accent-color
+		padding: 20px
 		color: #000
 		line-height: 1.4
-		border-radius: 5px
+		border-radius: 8px
 		cursor: pointer
 		transition: all .3s
+		background-image: linear-gradient(#cfcfcf, #fff)
+		box-shadow: inset 0 -4px 8px rgba(0,0,0,.5)
 		&:hover
 			border-color: #ffa200
 			transition: all .3s
-
-		&-close
-			.section-5-address-img-wrap, .section-5-address-hide, .link-show
-				display: none
 			.write-link
-				display: inline-block !important
-			&::before
-				content: ''
-				display: inline-block
-				width: 23px
-				height: 24px
-				position: absolute
-				top: 40%
-				right: 53px
-				background: url('../img/sprite.png') no-repeat
-				background-position: -217px 0
-
-			&-btn
-				top: -13px
-				right: 20px
-				position: absolute
-				background: red
-				color: #fff
-				font-size: 12px
-				padding: 3px 5px
-				border-radius: 5px
-				cursor: pointer
-		&-img
-			margin: 5px
-			width: 100px
-			height: 72px
+				text-decoration: none
+		&::before
+			content: ''
+			display: inline-block
+			width: 23px
+			height: 24px
+			position: absolute
+			top: 40%
+			right: 32px
+			background: url('../img/sprite.png') no-repeat
+			background-position: -385px 0
 
 
 		&-title
@@ -945,22 +957,10 @@ ol, ul
 			margin-top: 3px
 		&-time
 			margin-top: -4px
-
-		&-hide
-			display: block
-			margin-top: 30px
-			padding-top: 10px
-			border-top: 1px solid #000
-			font-size: 18px
-			&-cell-1
-				width: 66.66666666666666%
-				font-weight: bold
-				a
-					text-decoration: none
-					color: #000
-			&-cell-2
-				width: 33.33333333333333%
-				text-align: right
+	.write-link
+		color: #0042ff
+		font-size: 18px
+		text-decoration: underline
 
 
 
@@ -970,50 +970,80 @@ ol, ul
 
 
 
-.block-text
+
+
+
+
+
+
+
+
+
+.section-6
+	padding: 20px 0
+	position: relative
+	background-image: url('../img/s-bg.jpg')
+	background-repeat: no-repeat
+	background-size: 100%
+	background-position: 100% 0
+	&:before, &:after
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-repeat: no-repeat
+		background-size: 100%
+		z-index: -1
+	&:before
+		background-image: url('../img/s-bg.jpg')
+		background-position: 100% 45%
+		transform: scale(1,-1)
+	&:after
+		background-image: url('../img/s-bg.jpg')
+		background-position: 92px -14%
+		transform: scale(-1)
+		
+
+
+.section-map
+	margin-bottom: 10px
+	position: relative
+	&-head
+		margin-bottom: 25px
+		text-transform: none
+.map-container
+	height: 500px
+	margin: 0 90px
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.9)
+	overflow: hidden
+
+
+.section-text
 	margin-right: auto
 	margin-left: auto
-	padding: 37px 15px 30px
+	padding: 15px
 	.block-title
 		margin-bottom: 24px
 	.text-list-wrap
 		margin-bottom: 25px
 
 	h1,h2,h3,h4,h5,h6
-		display: inline-block
-		margin-left: 50%
-		margin-right: 50%
-		transform: translate(-50%)
-		color: #2197b0
+		font-family: $title-font-family
+		color: $title-color
 		margin-top: .7em
 		margin-bottom: .8em
 		text-align: center
-		text-transform: uppercase
-		position: relative
-		top: 0
-		right: 0
 		line-height: 1.3
-		white-space: nowrap
-		&::after, &::before
-			content: ''
-			position: absolute
-			left: 50%
-			transform: translateX(-50%)
-			width: 100%
-			height: 4px
-			background-color: #ffdd50
-		&::after
-			top: 0
-		&::before
-			bottom: 0
-			clear: both
 
 	h1
-		font-size: 2.5em
-	h2
 		font-size: 1.875em
+	h2
+		font-size: 1.625em
 	h3
-		font-size: 1.5em
+		font-size: 1.45em
 	h4
 		font-size: 1.25em
 	h5
@@ -1026,51 +1056,51 @@ ol, ul
 
 	p
 		margin: 0 0 20px 0
-		font-size: 1.125em
-		color: #4f4f4f
+		font-size: 1em
+		color: #000
 		line-height: 1.25
 		&:last-child
 			margin-bottom: 0
 
 	blockquote
-		margin-top: 20px
-		margin-bottom: 20px
-		padding: 15px 60px
-		color: #2197b0
+		margin-top: 19px
+		margin-bottom: 19px
+		padding: 14px 59px
+		color: #054b69
 		position: relative
 		text-align: center
 		font-size: 16px
 		font-style: italic
 		&:before
 			font-size: 45px
-			color: #2197b0
+			color: #054b69
 			position: absolute
 			top: 0
 			height: 2px
-			left: 40px
-			right: 40px
+			left: 39px
+			right: 39px
 			line-height: .5
-			background: linear-gradient(to right, #2197b0 45%, transparent 45%, transparent), linear-gradient(to right, transparent, transparent 55%, #2197b0 55%)
+			background: linear-gradient(to right, #054b69 45%, transparent 45%, transparent), linear-gradient(to right, transparent, transparent 55%, #054b69 55%)
 			font-family: serif
 			content: "\201C"
 		&:after
 			font-size: 45px
-			color: #2197b0
+			color: #054b69
 			position: absolute
 			bottom: 0
 			height: 2px
-			left: 40px
-			right: 40px
+			left: 39px
+			right: 39px
 			line-height: .5
-			background: linear-gradient(to right, #2197b0 45%, transparent 45%, transparent), linear-gradient(to right, transparent, transparent 55%, #2197b0 55%)
+			background: linear-gradient(to right, #054b69 45%, transparent 45%, transparent), linear-gradient(to right, transparent, transparent 55%, #054b69 55%)
 			font-family: serif
 			content: "\201D"
 
 
 	ul, ol
-		margin: 12px 0 0 0
-		padding: 0 0 0 60px
-		font-size: 1.125em
+		margin: 11px 0 0 0
+		padding: 0 0 0 59px
+		font-size: 1em
 		line-height: 1.2
 		list-style-type: disc
 		&.columns-2
@@ -1084,54 +1114,229 @@ ol, ul
 				&:nth-child(2n+1)
 					margin-right: 6%
 
-	.text-img-gallery
-		margin-top: 20px
-		padding: 0 70px
+	.image-gallery
+		max-width: 595px
+		margin: 19px auto 0
+		margin-top: 19px
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
 		align-items: center
 
-	.img-wrap
+	.image-wrap
+		display: flex
+		align-items: center
+		justify-content: center
 		&-sm, &-md, &-lg
 			overflow: hidden
-			margin: 0 8px
+			margin: 7px
 		&-sm
-			width: 212px
-			height: 141px
+			width: 182px
+			height: 126px
 		&-md
-			max-width: 300px
-			height: 200px
+			width: 273px
+			height: 189px
 		&-lg
-			max-width: 400px
-			height: 266px
+			width: 364px
+			height: 252px
+	// .text-image
+	// 	width: auto
+	// 	height: 100%
 
 
 	table
-		min-width: 535px
-		margin: 15px auto
-		border: 4px solid #fece0a
-		border-radius: 6px
+		min-width: 530px
+		margin: 21px auto
+		border: 4px solid #3b72c9
+		border-radius: 5px
+		font-size: 14px
 		th,td
-			padding: 5px 0
+			padding: 2px 0 1px
+			border-bottom: 1px solid #3b72c9
+			text-align: center
+
 		th
 			padding: 5px 5px 5px 0
-			color: #fff
-			text-align: left
-			background-color: #fece0a
-			background-image: linear-gradient(180deg, #fece0a, #d46200)
+			color: #003366
 			&:first-child
 				padding-left: 40px
 		td
-			color: #000
-			border-bottom: 1px solid #fece0a
-
-		.img-cell
+			color: #0099cc
+			font-weight: 400
+			
+		.image-cell
 			width: 50px
-			padding-left: 10px
+			text-align: center
 
-.mfp-image
-	cursor: pointer
+// .section-text-footer
+// 	padding: 0 50px
+
+.text-xcol-1
+	flex: 0 0 59%
+	max-width: 59%
+.text-xcol-2
+	flex: 0 0 41%
+	max-width: 41%
+
+
+.decorated-head 
+	font: 26px $title-font-family
+	background-image: linear-gradient(#ffcc99, #ffcc00 50%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	color: #ffcc00
+	text-align: center
+
+.decorated-head-icon
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: -12px
+		right: -12px
+		display: inline-block
+		width: 35px
+		height: 38px
+		background: url('../img/sprite.png') no-repeat
+		background-position: -476px 0
+
+@supports (-webkit-text-stroke: 1px blue) 
+	.decorated-head 
+		-webkit-text-stroke: 1px #000
+  
+
+.text-form-wrap
+	max-width: 280px
+	margin: 22px auto 8px
+
+.text-form
+	label
+		width: 100%
+		display: block
+		margin-bottom: 10px
+		min-height: 42px
+		background-color: #dcdcdc
+		padding-left: 42px
+		background-image: url('../img/sprite.png')
+		background-repeat: no-repeat
+		
+		color: #000
+		&.label-name
+			background-position: -230px 13px
+		&.label-email
+			background-position: -332px 11px
+		&.label-tel
+			background-position: -283px 12px
+		
+	input
+		width: 100%
+		padding: 14px 12px 12px 35px
+		background-color: #dcdcdc
+		border: none
+		outline: none
+		border-left: 2px solid #fff
+		font-size: 14px
+		color: #000
+		&:focus
+			box-shadow: inset -3px 3px 20px -7px rgba(0, 0, 0, 0.5)
+
+		&::-webkit-input-placeholder
+			color: #000
+			opacity: 1
+
+		&:-moz-placeholder
+			color: #000
+			opacity: 1
+
+		&::-moz-placeholder
+			color: #000
+			opacity: 1
+
+		&:-ms-input-placeholder
+			color: #000
+			opacity: 1
+
+		&:focus:required:invalid
+			box-shadow: inset 0 0 0 2px rgba(255,0,0,.5) 
+
+	.text-form-btn
+		text-transform: none
+		position: relative
+		top: 1px
+		width: 100%
+		max-width: 190px
+		padding: 2px
+		font-size: 16px
+		font-family: $default-font-family
+		line-height: 1.6
+		border: 2px solid #fff
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+		background-image: none
+		background-color: #158bbd
+		&:hover
+			border: 2px solid #fff
+			box-shadow: 0 0 5px rgba(0,0,0,.5), inset 0 0 20px 2px rgba(255,255,255,.6)
+	.text-form-btn-wrap
+		margin-top: 15px
+		text-align: center
+
+
+
+
+
+
+
+.footer
+	min-height: 85px
+	height: 1px
+	display: flex
+	align-items: center
+	background: #06364c url('../img/s5-bg.jpg') no-repeat
+	background-size: 200%
+	background-position: center
+	box-shadow: inset 0 -3px 10px rgba(0,0,0,.5)
+
+	&-xcol-1
+		flex: 0 0 32%
+		max-width: 32%
+	&-xcol-2
+		flex: 0 0 25%
+		max-width: 25%
+		display: flex
+		align-items: center
+	&-xcol-3
+		flex: 0 0 25%
+		max-width: 25%
+	&-xcol-4
+		flex: 0 0 18%
+		max-width: 18%
+		display: flex
+		align-items: center
+
+	&-info
+		display: flex
+		align-items: center
+		color: #99cccc
+
+	.copy
+		font-size: 12px
+		color: #0099cc
+		text-transform: uppercase
+		font-weight: bold
+	.phone-link
+		color: #99cccc
+.work-time-wrap
+	margin-left: 20px
+.footer-work-time-icon
+	width: 41px
+	height: 38px
+	background-position: -43px 0
+.footer-phone-icon
+	width: 29px
+	height: 44px
+	background-position: 0 0
+
+
 
 
 
