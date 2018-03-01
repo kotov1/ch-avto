@@ -230,7 +230,7 @@ ol, ul
 
 .btn
 	border-radius: 5px
-	border: 1px solid #fff
+	border: 2px solid #fff
 	outline: none
 	font: 12px $title-font-family
 	text-transform: uppercase
@@ -433,8 +433,8 @@ ol, ul
 		max-width: 23%
 		order: 2
 	&-xcol-3
-		flex: 0 0 23%
-		max-width: 23%
+		flex: 0 0 24%
+		max-width: 24%
 		margin-left: 2%
 		order: 3
 	&-xcol-4
@@ -929,14 +929,18 @@ ol, ul
 		line-height: 1.4
 		border-radius: 8px
 		cursor: pointer
-		transition: all .3s
+		transition: linear .3s all
 		background-image: linear-gradient(#cfcfcf, #fff)
 		box-shadow: inset 0 -4px 8px rgba(0,0,0,.5)
 		&:hover
 			border-color: #ffa200
 			transition: all .3s
+			&::before
+				transform: scale(1.1)
+				transition: linear .3s all
 			.write-link
 				text-decoration: none
+				color: #1d00ff 
 		&::before
 			content: ''
 			display: inline-block
@@ -1265,7 +1269,7 @@ ol, ul
 		top: 1px
 		width: 100%
 		max-width: 190px
-		padding: 2px
+		padding: 6px
 		font-size: 16px
 		font-family: $default-font-family
 		line-height: 1.6
@@ -1287,7 +1291,7 @@ ol, ul
 
 
 .footer
-	min-height: 85px
+	min-height: 95px
 	height: 1px
 	display: flex
 	align-items: center
@@ -1336,11 +1340,256 @@ ol, ul
 	height: 44px
 	background-position: 0 0
 
+// ==========================================================
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+.modal-form-wrap
+	max-width: 735px
+	min-height: 560px
+	margin: 0 auto
+	padding: 15px
+	background-color: $modal-window-color
+	background-image: $modal-window-bgi
+	overflow: hidden
+	border: $modal-window-border
+	border-radius: 8px
+	color: #fefefe
+
+	.interactive
+		margin-top: 10px
+		height: 240px
+
+
+	.modal-form-xcol-1, .modal-form-xcol-2
+		flex: 0 0 48.5%
+		max-width: 48.5%
+	.modal-form-xcol-1
+		margin-right: 3%
+
+
+
+	.geoloctaion
+		padding: 65px 20px 50px
+		text-align: center
+		text-transform: uppercase
+		color: #fefefe
+		div
+			margin-bottom: 20px
+	.metro-station
+		display: inline-block
+		font-size: 16px
+		font-family: $title-font-family
+		padding-left: 30px
+		position: relative
+		color: #fefefe
+		&::before
+			content: ''
+			display: inline-block
+			width: 20px
+			height: 15px
+			position: absolute
+			top: 3px
+			left: 7px
+			background: url('../img/sprite.png') no-repeat 
+			background-position: -525px 0
+
+
+	.tel-wrap
+		a
+			color: inherit
+			text-decoration: none
+			font-size: 24px
+			font-family: $title-font-family
+	.address
+		font-size: 18px
+		text-transform: none
+
+	.route-wrap
+		text-align: center
+		
+	.route
+		display: inline-block
+		padding: 15px 30px 
+		font-size: 14px
+		line-height: 1.2
+		text-decoration: underline
+		text-transform: uppercase
+		color: rgb(102, 153, 255)
+		cursor: pointer
+		position: relative
+		&:hover
+			text-decoration: none
+		&::before
+			content: ''
+			display: inline-block
+			width: 21px
+			height: 30px
+			position: absolute
+			top: 2px
+			left: 0
+			background: url('../img/sprite.png') no-repeat 
+			background-position: -559px 0
+
+
+	#map
+		width: 100%
+		min-width: 345px
+		height: 240px
+		overflow: hidden
+		input
+			color: #000
+
+
+.modal-form
+	position: relative
+
+	.modal-form-heading
+		text-transform: uppercase
+		color: #fff
+		font-family: $title-font-family
+		text-align: center
+
+
+
+	.form-popup
+		margin-top: 10px
+		&::after
+			content: ''
+			display: table
+			clear: both
+
+	input
+		width: 100%
+		margin-bottom: 10px
+		padding: 5px 15px
+		background-color: #fff
+		border: none
+		border-radius: 5px
+		outline: none
+		font-size: 14px
+		color: #004c78
+
+
+		&:focus:required:invalid
+			box-shadow: inset 0 0 0 2px rgba(255,0,0,.5) 
+
+	.tel
+		width: 46%
+
+	.time-date
+		width: 46%
+		float: right
+
+	.attention
+		clear: both
+		font-size: 12px
+		color: #fff
+
+	.btn-wrap
+		margin: 25px auto 0
+		text-align: center
+		.btn
+			font-size: 14px
+			min-width: 205px
+			padding: 8px
+
+
+
+	.modal-form-slider
+		.modal-form-slide
+			outline: none
+		.image-wrap
+			background-color: transparent
+			height: 240px
+			border-radius: 0
+			display: block
+			display: flex
+			align-items: center
+			justify-content: center
+
+	.slider-modal-prev, .slider-modal-next
+		width: 43px
+		height: 42px
+		background-repeat: no-repeat
+		background-image: url('../img/modal-slider-arrows.png')
+		top: 50%
+		transform: scale(.85) translateY(-50%)
+		opacity: .6
+		transition: opacity .3s linear 
+		&:hover
+			opacity: 1
+			transition: opacity .3s linear 
+	.slider-modal-prev
+		background-position: 1px 0
+		left: 5px
+	.slider-modal-next
+		background-position: 100% 0
+		right: 5px	
+
+
+
+
+
+
+
+
+
+
+
+.feedback-modal-wrap, .callback-modal-wrap
+	max-width: 578px
+	min-height: 310px
+	margin: 0 auto
+
+.feedback-modal, .callback-modal
+	position: relative
+	text-align: center
+	&-head
+		font: 26px $title-font-family
+	&-text
+		font-family: $title-font-family
+		margin-top: 10px
+
+.feedback-modal-form, .callback-modal-form
+	margin: 20px auto 0
+	max-width: 80%
+
+
+	label
+		display: block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-family: $title-font-family
+	.name, .tel
+		width: 80%
+		margin-bottom: 11px
+		padding: 10px 15px
+		font-family: $default-font-family
+	.tel
+		margin-bottom: 0
+
+.feedback-form-btn, .callback-form-btn
+	margin-top: 30px
+	padding: 10px 30px
+
+
+
+.success-modal-wrap
+	max-width: 435px
+	min-height: 150px
 
 
 
@@ -1352,16 +1601,90 @@ ol, ul
 .mfp-close
 	display: block
 	position: absolute
-	top: -4px
+	top: -10px
 	font-size: 12px
+	line-height: 55px
 	width: 17px
 	height: 17px
-	background: url('../img/sm-sprite.png') no-repeat -248px 0px
-	z-index: 1
+	background: url('../img/sprite.png') no-repeat -416px 0px
+	z-index: 100
 	cursor: pointer
 	opacity: 1
 	&:hover
-		background-position: -271px 0px
+		background-position: -439px 0px
+	&:active
+		top: -9px
+
+
+
+.cd-checkbox 
+	display: block
+	max-width: 90%
+	margin: 15px auto 0
+	vertical-align: top
+	font-size: 0
+	line-height: 1.2
+
+	.cd-hidden 
+		display: none
+
+	.cd-checkbox__pseudo-wr 
+		display: block
+		vertical-align: middle
+		width: 26px
+		height: 26px
+		box-sizing: border-box
+		padding: 3px
+		float: left
+
+	.cd-checkbox__pseudo 
+		display: block
+		float: left
+		width: 100%
+		height: 100%
+		border: 2px solid #c2c2c2
+		box-sizing: border-box
+		background-color: #fff
+		position: relative
+		-webkit-transition: background .2s ease-out,border .2s ease-out
+		transition: background .2s ease-out,border .2s ease-out
+		
+	.cd-checkbox__check 
+		position: absolute
+		top: 1px
+		left: 1px
+		stroke: #fff
+		stroke-dasharray: 19px
+		stroke-dashoffset: 19px
+		-webkit-transition: .2s ease-out
+		transition: .2s ease-out
+
+	.cd-checkbox__text 
+		display: block
+		margin-left: 35px
+		vertical-align: middle
+		text-align: left
+		color: #fff
+		font-size: 12px
+
+.cd-checkbox 
+	input[type=checkbox]
+		&:checked
+			~ .cd-checkbox__pseudo-wr 
+				.cd-checkbox__pseudo 
+					.cd-checkbox__check 
+						stroke-dashoffset: 38px
+
+.cd-checkbox 
+	input[type=checkbox]
+		&:checked
+			~ .cd-checkbox__pseudo-wr 
+				.cd-checkbox__pseudo 
+					background-color: transparent
+					border-color: #a0a0a0
+
+
+
 
 
 
@@ -1374,12 +1697,12 @@ ol, ul
 	top: 50%
 	left: 50%
 	transform: translate(-50%,-50%)
-	border: #777
-	box-shadow: 0 0 7px -2px rgba(0,0,0,.2)
-	padding: 5px
-	border-radius: 5px
-	background: #fff
-	z-index: 1044
+	border: #666
+	box-shadow: 0 0 5px -2px rgba(0,0,0,.2)
+	padding: 4px
+	border-radius: 6px
+	background: #ffe
+	z-index: 1043
 	#modal-close
 		display: block
 		position: absolute
@@ -1388,19 +1711,30 @@ ol, ul
 		font-size: 12px
 		width: 17px
 		height: 17px
-		background: url('../img/sm-sprite.png') no-repeat -248px 0px
+		background: url('../img/sprite.png') no-repeat -416px 0px
 		z-index: 1
 		cursor: pointer
 		opacity: 1
 		&:hover
-			background-position: -271px 0px
+			background-position: -439px 0px
 
 
 
 
 
 
-.scroll-button-wrap
+
+
+
+
+
+
+
+
+
+
+
+.scroll-btn-wrapper
 	display: flex
 	justify-content: center
 	align-items: center
@@ -1411,17 +1745,17 @@ ol, ul
 	height: 75px
 	z-index: 2000
 
-.scroll-button
+.btn-top
 	display: inline-block
-	width: 50px
-	height: 50px
-	box-shadow: 1px 1px 10px rgba(0,0,0,.5)
-	border-radius: 10px
+	width: 51px
+	height: 51px
+	box-shadow: 1px 1px 9px rgba(0,0,0,.5)
+	border-radius: 50%
 	font-size: .8125em
-	background-color: $accent-color
-	background-image: url(../img/arrow_up.png)
+	background-color: #158bbd
+	background-image: url(../img/arrow.svg)
 	background-repeat: no-repeat
-	background-size: 60%
+	background-size: 65%
 	background-position: 50%
 	color: #555
 	cursor: pointer
@@ -1447,7 +1781,7 @@ ol, ul
 	right: 5%
 	z-index: 999
 
-	.pulse, .cursor, .phone 
+	.pulse, .cursor
 		position: absolute
 		width: 75px
 		height: 75px
@@ -1461,21 +1795,24 @@ ol, ul
 		overflow: hidden
 
 	.pulse 
-		background: #6dc888
+		background: #158bbd
 		position: relative
 		transition: .5s ease-in-out
-
-	.phone 
-		font-size: 35px
-		line-height: 78px
-		animation: phone .9s ease-in-out infinite
+		animation: phone 1.8s linear infinite
 
 
-	.phone i 
+	.text 
+		position: absolute
+		opacity: 1
+		text-transform: uppercase
+		font-weight: 700
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 12px
 		transition: .5s ease-in-out
 
 	.pulse:hover 
-		background: #29AEE3
+		background: #054b69
 
 
 	.pulse:hover::before,
@@ -1494,25 +1831,12 @@ ol, ul
 	.pulse:hover::after 
 		animation-delay: .5s
 
-	.fa
-		font-family: 'Font Awesome'
-		font-weight: 900
-		-moz-osx-font-smoothing: grayscale
-		-webkit-font-smoothing: antialiased
-		display: inline-block
-		font-style: normal
-		font-variant: normal
-		text-rendering: auto
-		line-height: 1
-		&-phone:before
-			 content: "\f095"
-
 
 @keyframes phone
 	0%, 100%
-		transform: rotate(-20deg)
+		box-shadow: 0 0 10px #29AEE3
 	50%
-		transform: rotate(21deg)
+		box-shadow: 0 0 0 #29AEE3
 
 
 @keyframes pulse
@@ -1531,7 +1855,11 @@ ol, ul
 
 
 
-
+.error404
+	.section-1
+		padding: 20px 0
+	.head
+		margin-bottom: 0
 
 
 
@@ -1539,7 +1867,7 @@ ol, ul
 .er404
 	font-family: $title-font-family
 	text-align: center
-	padding-top: 20vh
+	padding-top: 15vh
 	text-transform: uppercase
 	&-number
 		font-size: 10em

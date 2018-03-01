@@ -72,15 +72,15 @@
 									<div class="navicon"></div>
 									<div class="toggle">
 										<ul class="toggle__menu">
-											<li><a class="menu-link" href="#">Ремонт</a></li>
-											<li><a class="menu-link" href="#">Преимущества</a></li>
-											<li><a class="menu-link" href="#">Автосервисы</a></li>
-											<li><a class="menu-link" href="#">На карте</a></li>
+											<li><a class="menu-link" href="#remont">Ремонт</a></li>
+											<li><a class="menu-link" href="#preimyshestva">Преимущества</a></li>
+											<li><a class="menu-link" href="#avtoservisu">Автосервисы</a></li>
+											<li><a class="menu-link" href="#karta">На карте</a></li>
 										</ul>
 									</div>
 								</nav>
 								<div class="btn-wrap head-btn-wrap">
-									<button class="btn head-btn">Обратный звонок</button>
+									<button class="btn head-btn call-mfp-callback">Обратный звонок</button>
 								</div>
 							</div>
 						</div>
@@ -167,7 +167,7 @@
 								<div class="remont-akpp-text">Возможные причины</div>
 								<div class="remont-akpp-symptoms">выберите симптом вашей неисправности в списке слева, чтобы узнать приблизительную стоимость ремонта и возможные причины поломки!</div>
 								<div class="btn-wrap repair-btn-wrap">
-									<button class="btn repair-btn">записаться на диагностику или ремонт</button>
+									<button class="btn repair-btn call-mfp-feedback">записаться на диагностику или ремонт</button>
 								</div>
 							</div>
 						</div>
@@ -189,7 +189,7 @@
 
 
 
-		<section class="section-2">
+		<section class="section-2" id="remont">
 
 			<div class=" section-text">
 
@@ -222,7 +222,7 @@
 										<div class="slider-otzuvu-commentator-name">Дмитрий Рыбаков</div>
 										<div class="slider-otzuvu-comment">Приехал после диагностики у официалов. Там предложили сделать замену турбины - за 137000 р. На автофоруме посоветовали ремонт в «рс-турбо». Причиной неисправности оказался забитый катализатор. Нужно было либо менять его полностью, либо вырезать. Кроме того, посоветовали прочистить интеркулер, из-за накопившегося масла, и поменять клапан вентиляции картерных газов. Сделали все за 3 часа!</div>
 										<div class="btn-wrap otzuvu-btn-wrap">
-											<button class="btn otzuvu-btn">записаться на ремонт турбины</button>
+											<button class="btn otzuvu-btn call-mfp-feedback">записаться на ремонт турбины</button>
 										</div>
 									</div>
 								</div>
@@ -279,7 +279,7 @@
 
 
 
-		<section class="section-3">
+		<section class="section-3" id="preimyshestva">
 			<div class="xcontainer">
 
 				<div class="section-head">Преимущества</div>
@@ -368,7 +368,7 @@
 
 					<div class="xcol section-form-xcol-2">
 						<div class="form-wrap section-form-form-wrap">
-							<form action="#" class="form section-form-form">
+							<form action="#" class="form section-form-form send-form">
 
 								<input type="hidden" name="project_name" value="CH-AUTO">
 								<input type="hidden" name="admin_email" value="test@gmail.com">
@@ -398,7 +398,7 @@
 
 
 
-		<section class="section-5">
+		<section class="section-5" id="avtoservisu">
 			<div class="xcontainer">
 
 				<div class="section-head section-5-head">Автосервисы</div>
@@ -409,74 +409,674 @@
 						<div class="xrow">
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-1">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-1">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 1</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-2">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-2">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 2</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-3">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-3">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 3</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-4">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-4">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 4</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-5">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-5">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 5</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-6">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-6">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 6</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-7">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-7">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 7</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
 							<div class="xcol section-5-xcol">
-								<div class="section-5-address">
+								<div class="section-5-address call-mfp-8">
 									<div class="section-5-address-title">Автосервис на Юго-Западной</div>
 									<div class="section-5-address-descr">ул. Озерная, д.50, корп.1, стр.1</div>
 									<div class="section-5-address-time">Часы работы: 9:00 - 21:00</div>
 									<span class="write-link">Записаться</span>
+
+									<div class="modal-form-wrap mfp-hide" id="modal-form-8">
+										<div class="modal-form">
+											<div class="mfp-close"></div>
+
+											<div class="xrow">
+												<div class="xcol modal-form-xcol-1">
+													<div class="geoloctaion">
+														<div class="metro-station">юго-западная 8</div>
+														<div class="tel-wrap">
+															<noindex><a href="tel:+74955555555">+7 (495) 555-55-55</a></noindex>
+														</div>
+														<div class="address">ул. Озерная, д.50, корп1, стр.1</div>
+													</div>
+													<div class="route-wrap">
+														<div class="route" id="route">проложить маршрут</div>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2 t-255">
+													<div class="modal-form-heading">Записаться на сервис</div>
+													<form action="#" class="form-popup send-form">
+
+														<input type="hidden" name="project_name" value="CH-AUTO">
+														<input type="hidden" name="admin_email" value="test@gmail.com">
+														<input type="hidden" name="form_subject" value="Заявка с сайта">
+
+														<input type="text" name="Имя" class="name-input" placeholder="Ваше имя:*" required>
+														<div class="time-date">
+															<input type="text" class="modal-date" name="Время" placeholder="Дата записи:">
+															<input type="text" class="modal-time" name="Дата" placeholder="Время записи:">
+														</div>
+														<input type="tel" name="Телефон:*" class="tel" placeholder="Телефон:*"  required>
+														<div class="attention">
+															<span>*-обязательные поля.</span><br>
+															<span>Мы перезвоним вам для подтверждения записи в течение 10 минут.</span>
+														</div>
+														<div class="btn-wrap form-btn-wrap">
+															<button type="submit" class="btn form-btn">Записаться</button>
+															<label class="cd-checkbox cd-checkbox--required">
+																<input type="checkbox" checked="" class="cd-hidden" disabled>
+																<span class="cd-checkbox__pseudo-wr">
+																	<span class="cd-checkbox__pseudo">
+																		<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+																		<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ff0000" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+																		</svg>
+																	</span>
+																</span>
+																<span class="cd-checkbox__text">Отправляя форму вы соглашаетесь на обработку персональных&nbsp;данных</a></span>
+															</label>
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="xrow interactive">
+												<div class="xcol modal-form-xcol-1 b-318">
+													<div class="map">
+														<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad49da4cd47a8c0a71cc6ce2c7d9ca3a494f17912a1ad4a3eecf53aa84ddef0db&amp;width=100%25&amp;height=240&amp;lang=ru_UA&amp;scroll=true"></script>
+													</div>
+												</div>
+												<div class="xcol modal-form-xcol-2">
+													<div class="modal-form-slider js-modal-slider">
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/volkswagen.jpg" alt="slide-img" class="responsive-image"></div>
+														</div>
+														<div class="modal-form-slide">
+															<div class="image-wrap"><img data-lazy="img/slider-active-img.png" alt="slide-img" class="responsive-image"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 							</div>
 
@@ -489,7 +1089,7 @@
 
 
 
-		<section class="section-6">
+		<section class="section-6" id="karta">
 
 			<div class="xcontainer">
 				<div class="section-map">
@@ -522,7 +1122,7 @@
 				<h2>Специализированные ЦВТ-Сервисы в Москве</h2>
 
 				<div class="mfp-image image-wrap image-wrap-sm float-left">
-					<img src="img/slide1.png" data-mfp="img/slide2.png" class="responsive-img" alt="image">
+					<img src="img/slide1.png" data-mfp="img/slide2.png" class="responsive-image" alt="image">
 				</div>
 				<p>Как известно, ремонт вариатора – задача для профессионалов. Для качественного обслуживания CVT коробки недостаточно иметь большой опыт в вопросах автосервиса, потребуется специальное оборудование, позволяющее провести диагностику узла. Благодаря профессиональному оборудованию наши сотрудники могут сразу определить, стоит ли проводить ремонт вариаторной коробки, или будет целесообразнее его заменить.</p>
 				<p>Отремонтировать вариаторную коробку, безусловно, дешевле, чем ее заменить. И чем оперативнее вы обратитесь в автосервис, тем выше будет вероятность успешного восстановления узла. Когда имеют место неполадки CVT, их нелегко выявить без соответствующего опыта. Или можно принять за поломку CVT неисправность совершенно другого узла. Чтобы исключить вероятность ошибки, которая повлечет серьезные поломки в дальнейшем, необходимо пользоваться услугами только опытных автомехаников. Наши сотрудники знают обо всех нюансах, связанных с обслуживанием CVT коробки, и смогут устранить причины любой проблемы , связанной с ней.</p>
@@ -551,7 +1151,7 @@
 
 				<h2>Переборка вариатора рядом с метро м. Юго-Западная</h2>
 				<div class="mfp-image image-wrap image-wrap-sm float-right">
-					<img src="img/slide1.png" data-mfp="img/slide2.png" class="responsive-img" alt="image">
+					<img src="img/slide1.png" data-mfp="img/slide2.png" class="responsive-image" alt="image">
 				</div>
 				<p>Переборка вариатора – технический процесс, осуществляемый в специализированных технических центрах рядом с метро м. Калужская. Важно, чтобы данное мероприятие осуществлялось по отработанной методике.</p>
 				<p>Для того, чтобы перебрать вариатор, необходимо разобрать и собрать коробку передач CVT. Следовательно, изначально должна быть выполнена дефектовка. Данный вид оценки состояния рассматриваемого агрегата является окончательной диагностикой и, по сути, является продолжением входной и компьютерной диагностики коробки передач вариаторного типа.</p>
@@ -665,7 +1265,7 @@
 						<div class="xcol text-xcol-2">
 							<div class="decorated-head">Заполнив заявку</div>
 							<div class="form-wrap text-form-wrap">
-								<form action="" class="form text-form">
+								<form action="#" class="form text-form">
 					
 									<input type="hidden" name="project_name" value="CH-AUTO">
 									<input type="hidden" name="admin_email" value="test@gmail.com">
@@ -701,7 +1301,7 @@
 
 					<div class="xcol section-form-xcol-2">
 						<div class="form-wrap section-form-form-wrap">
-							<form action="#" class="form section-form-form">
+							<form action="#" class="form section-form-form send-form">
 
 								<input type="hidden" name="project_name" value="CH-AUTO">
 								<input type="hidden" name="admin_email" value="test@gmail.com">
@@ -780,8 +1380,65 @@
 	</div>
 
 
+	<div class="modal-form-wrap feedback-modal-wrap mfp-hide">
+		<div class="feedback-modal">
+			<div class="mfp-close"></div>
+			<div class="feedback-modal-head">Записаться на ремонт или диагностику</div>
+			<div class="feedback-modal-text">Заполните пожалуйста соответствующие поля и мы Вам обязательно перезвоним! Спасибо.</div>
+			<div class="feedback-modal-form">
+				<form action="#" class="send-form">
+					<input type="hidden" name="project_name" value="CH-AUTO">
+					<input type="hidden" name="admin_email" value="test@gmail.com">
+					<input type="hidden" name="form_subject" value="Заявка на диагностику или ремонт">
+
+					<label class="label-name">ФИО<input type="text" class="name" name="Имя" required></label>
+					<label class="label-tel">Телефон<input type="tel" class="tel" name="Телефон" required></label>
+					<button type="submit" class="btn form-btn feedback-form-btn">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-form-wrap callback-modal-wrap mfp-hide">
+		<div class="callback-modal">
+			<div class="mfp-close"></div>
+			<div class="feedback-modal-head">Обратный звонок</div>
+			<div class="feedback-modal-text">Заполните пожалуйста соответствующие поля и мы Вам обязательно перезвоним! Спасибо.</div>
+			<div class="callback-modal-form">
+				<form action="#" class="send-form">
+					<input type="hidden" name="project_name" value="CH-AUTO">
+					<input type="hidden" name="admin_email" value="test@gmail.com">
+					<input type="hidden" name="form_subject" value="Заявка на обратный звонок">
+
+					<label class="label-name">ФИО<input type="text" class="name" name="Имя" required></label>
+					<label class="label-tel">Телефон<input type="tel" class="tel" name="Телефон" required></label>
+					<button type="submit" class="btn form-btn callback-form-btn">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-form-wrap success-modal-wrap mfp-hide">
+		<div class="callback-modal">
+			<div class="mfp-close"></div>
+			<div class="feedback-modal-head">Ваша заявка принята</div>
+			<div class="feedback-modal-text">Мы свяжемся с Вами в ближайшее время!</div>
+		</div>
+	</div>
 
 
+	<div class="scroll-btn-wrapper" style="display: none;">
+		<div class="btn-top"></div>
+	</div>
+
+	<div class="call-button call-mfp-callback">
+		<div class="pulse">
+			<div class="cursor"></div>
+			<div class="text">Заказать звонок</div>
+		</div>
+	</div>
+
+	<div class="images-modal"></div>
 
 
 
