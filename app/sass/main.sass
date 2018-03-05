@@ -225,7 +225,6 @@ ol, ul
 	color: $title-color
 .section-text
 	font-size: 16px
-	font-weight: bold
 	color: #000
 
 .btn
@@ -593,8 +592,8 @@ ol, ul
 		z-index: -1
 
 .otzuvu
-	margin-top: 38px
-	padding: 0 135px
+	margin-top: 20px
+	padding: 0 90px
 	position: relative
 	&-xcol-1
 		flex: 0 0 50%
@@ -611,9 +610,9 @@ ol, ul
 		margin: 0 3px
 
 	&-image-wrap
-		margin-top: 5px
-		max-width: 415px
-		max-height: 390px
+		margin: 5px 0
+		width: 419px
+		height: 390px
 		border: 2px solid #fff
 		border-radius: 5px
 		box-shadow: 0 0 5px 3px rgba(0,0,0,.25)
@@ -1719,7 +1718,14 @@ ol, ul
 			background-position: -439px 0px
 
 
-
+.modal-overlay
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1042
+	background: rgba(0,0,0,.75)
 
 
 
@@ -1854,15 +1860,43 @@ ol, ul
 
 
 
+.hlebnie-croshki
+	padding: 30px 0 0
+	list-style: none
+	border-radius: 4px
+	font-size: 1em
+	>
+		span
+			display: inline-block
+			+ span:before
+				padding: 0 5px
+				color: #000
+				content: "»"
+			a
+				color: #168abd
+				&:hover
+					color: $accent-color
+
+			&:last-child
+				a
+					color: #000
+					text-decoration: none
+					cursor: default
+					&:hover
+						color: #000
+
+
+
+
+
+
+
 
 .error404
 	.section-1
 		padding: 20px 0
 	.head
 		margin-bottom: 0
-
-
-
 
 .er404
 	font-family: $title-font-family

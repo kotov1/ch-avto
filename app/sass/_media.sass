@@ -62,8 +62,11 @@
 
 
 	.otzuvu
-		padding: 0
-
+		padding: 0 20px
+	.slider-otzuvu-next
+		right: -20px
+	.slider-otzuvu-prev
+		left: -20px
 
 
 
@@ -180,7 +183,7 @@
 		position: fixed
 		top: 72px
 		right: 15px
-		height: 15px
+		height: 35px
 		width: 40px
 		display: block
 		z-index: 101
@@ -331,6 +334,7 @@
 
 
 	.otzuvu
+		padding: 0
 		&-xcol-1
 			flex: 0 0 100%
 			max-width: 100%
@@ -344,7 +348,17 @@
 		&-content
 			margin-top: 30px
 		&-prev, &-next
-			top: 40%
+			top: 24%
+		&-prev
+			left: 0
+		&-next
+			right: 0
+		&-image-wrap
+			max-width: 415px
+			width: 100%
+			margin: 5px auto
+			height: auto
+			min-height: 390px
 	.otzuvu-btn-wrap
 		text-align: center
 
@@ -681,6 +695,11 @@
 
 
 
+
+
+
+
+
 	.er404
 		padding-top: 5vh
 		font-size: .4em
@@ -688,9 +707,10 @@
 	/**/
 
 
-
-
-
+@media only screen and (max-width : 500px)
+	.for-images-modal, .modal-overlay
+		display: none
+	/**/
 
 
 
@@ -706,8 +726,14 @@
 
 
 	.slider-otzuvu
+		&-image-wrap
+			max-width: 415px
+			width: 100%
+			margin: 5px auto
+			height: 250px
+			min-height: auto
 		&-prev, &-next
-			top: 28%
+			top: 14%
 
 	.section-separator
 		height: 10px
@@ -751,7 +777,11 @@
 	.feedback-modal-form, .callback-modal-form
 		max-width: 100%
 
-
+	
+	.hlebnie-croshki
+		font-size: 13px
+		> span + span:before
+			padding: 0 1px
 
 
 	.scroll-btn-wrapper

@@ -1,24 +1,14 @@
 $(function() {
 
 
-	$('.mfp-image').magnificPopup({
-		delegate: 'img',
-		type: 'image',
-		image: {
-			cursor: 'mfp-zoom-out-cur',
-			verticalFit: true,
-			tError: '<a href="%url%">The image</a> could not be loaded.'
-		}
-	});
-
-
 	$(".mfp-image").click(function(){
 		if ($('.images-modal').hasClass('for-images-modal')){
 
 			$('.images-modal').empty().removeClass('for-images-modal');
 
 		}else{
-
+			if($(window).width() > 500 ) {
+			$( document.body ).append('<div class="modal-overlay"></div>');
 			var mfpImg = $(this).children('img').data('mfp');
 			$('.images-modal').append('<img src ='+mfpImg+'>');
 			$('.images-modal').append('<div id="modal-close"></div>');
@@ -28,9 +18,9 @@ $(function() {
 
 			$('#modal-close').click(function(){
 				$('.images-modal').empty().removeClass('for-images-modal');
-				$.magnificPopup.close();
+				$('.modal-overlay').remove();
 			});
-			
+			}
 		}
 	});
 
@@ -40,7 +30,7 @@ $(function() {
 		if ( (!div.is(e.target) && div.has(e.target).length === 0) && div.hasClass('for-images-modal') ) {
 
 			$('.images-modal').empty().removeClass('for-images-modal');
-			$.magnificPopup.close();
+			$('.modal-overlay').remove();
 
 		}
 	});
@@ -76,28 +66,6 @@ $(function() {
 
 	$('body').copyright();
 
-
-	// $(".form").submit(function(e) {
-	// 	var th = $(this);
-	// 	$.ajax({
-	// 		type: "POST",
-	// 		url: "mail.php",
-	// 		data: th.serialize()
-	// 	}).done(function() {
-	// 		$.magnificPopup.open({
-	// 			items: {
-	// 	   		src: '.success-modal-wrap',
-	// 	    		type: 'inline',
-	// 	   		mainClass: 'mfp-fade'
-	// 			}
-	// 		});
-	// 		setTimeout(function() {
-	// 			th.trigger("reset");
-	// 			$.magnificPopup.close();
-	// 		}, 2000);
-	// 	});
-	// 	return false;
-	// });	
 
 
 	$(".send-form").submit(function(e) {
@@ -217,12 +185,15 @@ $(function() {
 	});
 	$('.slider-nav').slick({
 		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		asNavFor: '.slider-for',
 		vertical: true,
 		verticalSwiping: true,
 		arrows: false,
+		focusOnSelect: true,
 		responsive: [
 			{
 			breakpoint: 991,
@@ -275,6 +246,8 @@ $(function() {
 			var top = $(id).offset().top -100;
 			event.preventDefault();
 			$('body,html').animate({scrollTop: top}, 1500);
+			$('.navicon').toggleClass('navicon--active');
+			$('.toggle').toggleClass('toggle--active');
 		}
 	});
 
